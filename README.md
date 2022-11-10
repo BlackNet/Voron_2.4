@@ -1,6 +1,7 @@
 # Voron_2.4
 
-This is a Voron 2.4r2 build.
+This is a Voron 2.4r2 build.  This is a work in progress and here I am documenting the journey, hardware, software, misc.
+
 
 
 Hardware:
@@ -11,7 +12,7 @@ Hardware:
   * Printed parts from West3d
     * Updated Mod for Stealthburner for rapido UFH
   * Octopus 1.1 board, STM32F446
-  * vivedino rails
+  * vivedino rails with Mobilux NGLI-1 lube
   * Vivendio bed heater, 110v 650W NTC100K b3950
   * Upgraded heatsink on TMC drivers, 10x10x13mm
   * USB 3.0 Keystone Jack Insert
@@ -52,7 +53,5 @@ input shaping
 
 HD camera mount
 
+HD camera support (defuncgt in bullseye)
 
-
-
-:DONE:
