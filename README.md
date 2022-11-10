@@ -25,7 +25,7 @@ Hardware:
     * Printer
     * Filament Dryer,
     * Heated bed (coming soon)
-  * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust
+  * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust, silent and variable speed.
   * Euclid probe inplace of inductive probe
 
 
@@ -49,8 +49,6 @@ eulcid probe macros
 runout sensor
 
 case lights
-
-case fan speed variable control via pi
 
 input shaping
 
