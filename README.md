@@ -18,6 +18,7 @@ Hardware:
   * USB 3.0 Keystone Jack Insert
   * Cat 5 ethernet keystone Jack Insert
   * Pi hardware: 4 Model B Rev 1.4
+  * Icetower low profile
   * BTT PITFT50 V2.0 5inch LCD touchscreen
   * TP-link Smart Strip for:
     * Printer
