@@ -1,5 +1,6 @@
 # Voron_2.4
-Klipper configuration for formbot Voron V2.4 350mm with Euclid probe, HD camera, steathburner.
+
+This is a Voron 2.4r2 build.
 
 
 Hardware:
@@ -8,6 +9,10 @@ Hardware:
   * Moons' motors NS17HD6P420I-04 1.8deg
   * Rapido UFH plus hotend
   * Printed parts from West3d
+    * Updated Mod for Stealthburner for rapido UFH
+  * Octopus 1.1 board, STM32F446
+  * vivedino rails
+  * Vivendio bed heater, 110v 650W NTC100K b3950
   * Upgraded heatsink on TMC drivers, 10x10x13mm
   * USB 3.0 Keystone Jack Insert
   * Cat 5 ethernet keystone Jack Insert
@@ -18,6 +23,7 @@ Hardware:
     * Filament Dryer,
     * Heated bed (coming soon)
   * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust
+  * Euclid probe inplace of inductive probe
 
 
 Software Used:  
