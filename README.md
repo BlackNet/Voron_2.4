@@ -28,6 +28,7 @@ Hardware:
   * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust, silent and variable speed.
   * Euclid probe inplace of inductive probe
   * LED effects for use with StealthBurner 
+  * Kiauh g-code shell extension
 
 
 Software Used:  
