@@ -45,17 +45,19 @@ Software Used:
 :install:
 
 - setup kiaut
-* install klipper
-* install moonraker
- install mainsail
+  * install klipper
+  * install moonraker
+  * install mainsail
+  * install telegraph bot
+  * install gcode shell command
 
 * create symlink for new config.  
   * ln -s ./printer_data/config/ ./klipper_config
 
-* install gcode shell command
 * install moonraker timelapse
-* install telegraph bot
 * install led effects
+* install klipper host mcu
+
 
 
 :TODO:
