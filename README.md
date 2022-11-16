@@ -42,6 +42,22 @@ Software Used:
 
 
 
+:install:
+
+- setup kiaut
+* install klipper
+* install moonraker
+ install mainsail
+
+* create symlink for new config.  
+  * ln -s ./printer_data/config/ ./klipper_config
+
+* install gcode shell command
+* install moonraker timelapse
+* install telegraph bot
+* install led effects
+
+
 :TODO:
 
 stealth burner conversion
