@@ -44,19 +44,21 @@ Software Used:
 
 :install:
 
-- setup kiaut
+- install/setup kiauh = https://github.com/th33xitus/kiauh
   * install klipper
   * install moonraker
   * install mainsail
+  * install klipperscreen
   * install telegraph bot
   * install gcode shell command
+  * install theme - Mainsail x Voron Toolhead
 
 * create symlink for new config.  
   * ln -s ./printer_data/config/ ./klipper_config
 
-* install moonraker timelapse
-* install led effects
-* install klipper host mcu
+* install moonraker timelapse = https://github.com/mainsail-crew/moonraker-timelapse
+* install led effects = https://github.com/julianschill/klipper-led_effect
+* install klipper host mcu = https://www.klipper3d.org/RPi_microcontroller.html
 
 
 
