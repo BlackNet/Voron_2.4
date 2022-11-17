@@ -29,6 +29,7 @@ Hardware:
   * Euclid probe inplace of inductive probe
   * LED effects for use with StealthBurner 
   * Kiauh g-code shell extension
+  * BTT filament runout sensor
 
 
 Software Used:  
