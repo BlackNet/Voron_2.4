@@ -39,6 +39,7 @@ Software Used:
   * timelapse for timelapse videos
   * Tailscale for VPN
   * Github for backup/sharing
+  *crowsnest for webcam
 
 
 
@@ -59,6 +60,7 @@ Software Used:
 * install moonraker timelapse = https://github.com/mainsail-crew/moonraker-timelapse
 * install led effects = https://github.com/julianschill/klipper-led_effect
 * install klipper host mcu = https://www.klipper3d.org/RPi_microcontroller.html
+* install crowsnest for camera = https://github.com/mainsail-crew/crowsnest
 
 
 

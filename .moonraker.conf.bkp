@@ -82,3 +82,9 @@ path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
 
+[update_manager crowsnest]
+type = git_repo
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+install_script = tools/install.sh
+
