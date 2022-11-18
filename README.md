@@ -35,7 +35,7 @@ Hardware:
 Software Used:  
 
   * OS: Raspberry Pi ARM64, based on debian bullseye.
-  * kiauh https://git.io/JnmlX for base install of Klipper / Moonraker / Mainsail / KlipperScreen / Telegram Bot
+  * kiauh https://git.io/JnmlX for base install of Klipper / Moonraker / Mainsail / KlipperScreen
   * timelapse for timelapse videos
   * Tailscale for VPN
   * Github for backup/sharing
@@ -50,7 +50,6 @@ Software Used:
   * install moonraker
   * install mainsail
   * install klipperscreen
-  * install telegraph bot
   * install gcode shell command
   * install theme - Mainsail x Voron Toolhead
 
