@@ -66,10 +66,6 @@ Software Used:
 
 :TODO:
 
-stealth burner conversion
-
-eulcid probe macros
-
 runout sensor
 
 case lights
@@ -77,6 +73,3 @@ case lights
 input shaping
 
 HD camera mount
-
-HD camera support (defuncgt in bullseye)
-
