@@ -91,6 +91,8 @@ gpu_mem=512
 
 # Enable pwmchip sysfs interface
 # pwm and pwm2
+# needs -=> echo 0 > /sys/class/pwm/pwmchip0/export
+# AND
 # needs -=> echo 1 > /sys/class/pwm/pwmchip0/export
 dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4
 
