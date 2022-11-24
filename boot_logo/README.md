@@ -8,6 +8,8 @@ The RPI boot splash screen is located /usr/share/plymouth/themes/pix/splash.png
 We replace that file with our file and reboot.
 
 
+
+
 ** PWM support **
 
 PWM on the pi4 / cm4 has TWO channels
