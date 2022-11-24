@@ -29,8 +29,8 @@ raspi-config = set startup to command prompt and NOT X
 ** PWM support **
 
 PWM on the pi4 / cm4 has TWO channels
-*Channel 1 = pins GPIO 12 / GPIO 18
-*Channel 2 = pins GPIO 13 / GPIO 19
+  * Channel 1 = pins GPIO 12 / GPIO 18
+  * Channel 2 = pins GPIO 13 / GPIO 19
 
 In /boot/config.txt the line to enable them is
 dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4
