@@ -1,4 +1,5 @@
 
+ --------------------
 ** RPI custom boot logo **
 
 ![RPI Boot logo](raspberry_voron_splash_purple.png)  
@@ -9,6 +10,7 @@ We replace that file with our file and reboot.
  
 
  
+ --------------------
 ** speeding up boot **
 
 Disable rainbow: Set disable_splash=1 in /boot/config.txt
@@ -23,7 +25,7 @@ raspi-config = set startup to command prompt and NOT X
 
  
  
- 
+  --------------------
 ** PWM support **
 
 PWM on the pi4 / cm4 has TWO channels
@@ -39,4 +41,5 @@ echo 0 > /sys/class/pwm/pwmchip0/export
 echo 1 > /sys/class/pwm/pwmchip0/export
 
 this can be changed in /etc/rc.local before 'exit'
+
 
