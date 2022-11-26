@@ -29,6 +29,13 @@ We replace that file with our file and reboot.
 ** PWM support **
 
 Audio system uses PWM pins and may need to be disabled.
+1) Pin 18 is the only one available on all platforms, and
+    used by the I2S audio interface
+    12 and 13 might be better choices on an A+, B+ or Pi2.
+2) The onboard analogue audio output uses both PWM channels.
+3) So be careful mixing audio and PWM.
+4) Currently the clock must have been enabled and configured
+             by other means.
 
 PWM on the pi4 / cm4 has TWO channels
   * Channel 1 = pins GPIO 12 / GPIO 18
