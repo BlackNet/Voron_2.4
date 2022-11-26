@@ -45,7 +45,7 @@ Software Used:
   * timelapse for timelapse videos
   * Tailscale for VPN
   * GitHub for backup/sharing
-  *Crowsnest for webcam
+  * Crowsnest for webcam
 
 
 
