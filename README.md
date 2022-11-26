@@ -79,3 +79,6 @@ case lights
 input shaping
 
 HD camera mount
+
+Nevermore setup
+
