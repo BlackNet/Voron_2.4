@@ -28,6 +28,8 @@ We replace that file with our file and reboot.
   --------------------
 ** PWM support **
 
+Audio system uses PWM pins and may need to be disabled.
+
 PWM on the pi4 / cm4 has TWO channels
   * Channel 1 = pins GPIO 12 / GPIO 18
   * Channel 2 = pins GPIO 13 / GPIO 19
