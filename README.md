@@ -46,7 +46,7 @@ Software Used:
   * Tailscale for VPN
   * GitHub for backup/sharing
   * Crowsnest for webcam
-
+  * Auto_Z for z offset. https://github.com/protoloft/klipper_z_calibration
 
 
 :install:
