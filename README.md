@@ -11,7 +11,7 @@ Hardware:
   * Rapido UFH plus hotend
   * TMC2209 stepper drivers
   * Printed parts from West3d
-    * Updated Mod for Stealthburner for rapido UFH
+    * Updated Mod for Stealthburner for Rapido UFH
   * Octopus 1.1 board, STM32F446
   * vivedino rails with Mobilux NGLI-1 lube
   * Vivendio bed heater, 110v 650W NTC100K b3950
