@@ -4,6 +4,7 @@
 ### MacOSX users: If you use Textedit to edit this file make sure to use 
 ### "plain text format" and "disable smart quotes" in "Textedit > Preferences"
 
+
 ### Configure which camera to use
 #
 # Available options are:
