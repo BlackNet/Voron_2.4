@@ -1,5 +1,5 @@
 *~
-~/printer_data/config/.gitignore
-~/printer_data/config/config/mcu.cfg
-~/printer_data/config/config/extruder.cfg
-#config/klipper_expander.cfg
+.gitignore
+mcu.cfg
+extruder.cfg
+klipper_expander.cfg
