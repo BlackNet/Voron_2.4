@@ -22,12 +22,11 @@ done
 
 read -p "Input flash device: " flash_dev
 
-echo -e "flashing: "$mcus${flash_dev}
 
+echo -e "flashing: " ${mcu_list[$flash_dev-1]}
 
-
-#sudo service klipper stop
-#make flash FLASH_DEVICE=$mcus${flash_dev} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-octopus-446
-#sudo service klipper start
+sudo service klipper stop
+make flash FLASH_DEVICE=${mcu_list[$flash_dev-1]} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-octopus-446
+sudo service klipper start
 
 
