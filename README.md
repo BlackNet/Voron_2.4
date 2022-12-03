@@ -66,14 +66,14 @@ Software Used:
 * install led effects = https://github.com/julianschill/klipper-led_effect
 * install Klipper host MCU = https://www.klipper3d.org/RPi_microcontroller.html
 * install Crowsnest for camera = https://github.com/mainsail-crew/crowsnest
+* install tailscale for remove VPN = https://tailscale.com/
+
 
 
 
 :TODO:
 
 runout sensor
-
-case lights
 
 input shaping
 
