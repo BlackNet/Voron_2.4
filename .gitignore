@@ -1,6 +1,6 @@
 *~
 *.gitignore*
-*klipper_expander.cfg*
+**klipper_expander.cfg**
 **config/mcu.cfg**
 **config/extruder.cfg**
 
