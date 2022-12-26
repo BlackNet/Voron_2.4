@@ -3,6 +3,5 @@
 **config/mcu.cfg**
 **config/extruder.cfg**
 **/config/extruder.cfg**
-
-
-
+**/config/klipper_epander.cfg**
+**klipper_expander.cfg**
