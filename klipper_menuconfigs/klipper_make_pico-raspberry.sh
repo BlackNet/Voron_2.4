@@ -3,7 +3,7 @@ make clean KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-rasp
 make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pico
 make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pico
 
-#sudo service klipper stop
-#make flash KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pico
+sudo service klipper stop
+make flash KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pico
 
-#sudo service klipper start
+sudo service klipper start
