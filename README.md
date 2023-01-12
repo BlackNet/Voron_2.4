@@ -31,7 +31,7 @@ Hardware:
     * Filament Dryer,
     * Heated bed (coming soon)
   * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust, silent and variable speed.
-  * Euclid probe in place of the inductive probe
+  * TAP - was Euclid probe in place of the inductive probe -
   * LED effects for use with StealthBurner 
   * Kiauh g-code shell extension
   * BTT filament runout sensor
@@ -47,6 +47,7 @@ Software Used:
   * GitHub for backup/sharing
   * Crowsnest for webcam
   * Auto_Z for z offset. https://github.com/protoloft/klipper_z_calibration
+  * Tap https://github.com/VoronDesign/Voron-Tap/blob/main/config/tap_klipper_instructions.md
 
 
 :install:
@@ -73,7 +74,7 @@ Software Used:
 
 :TODO:
 
-TAP 
+replace euclid with TAP 
 
 runout sensor
 
