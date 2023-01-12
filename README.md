@@ -36,6 +36,8 @@ Hardware:
   * Kiauh g-code shell extension
   * BTT filament runout sensor
   * Klipper Expander board - for case lights
+  * Rasberry Pico for resonance testing, usb portable
+  * Tap https://github.com/VoronDesign/Voron-Tap
 
 
 Software Used:  
@@ -47,7 +49,6 @@ Software Used:
   * GitHub for backup/sharing
   * Crowsnest for webcam
   * Auto_Z for z offset. https://github.com/protoloft/klipper_z_calibration
-  * Tap https://github.com/VoronDesign/Voron-Tap
 
 
 :install:
