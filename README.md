@@ -47,7 +47,7 @@ Software Used:
   * GitHub for backup/sharing
   * Crowsnest for webcam
   * Auto_Z for z offset. https://github.com/protoloft/klipper_z_calibration
-  * Tap https://github.com/VoronDesign/Voron-Tap/blob/main/config/tap_klipper_instructions.md
+  * Tap https://github.com/VoronDesign/Voron-Tap
 
 
 :install:
