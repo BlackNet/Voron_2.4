@@ -73,6 +73,8 @@ Software Used:
 
 :TODO:
 
+TAP 
+
 runout sensor
 
 input shaping
