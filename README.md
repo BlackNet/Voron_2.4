@@ -31,13 +31,12 @@ Hardware:
     * Filament Dryer,
     * Heated bed (coming soon)
   * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust, silent and variable speed.
-  * TAP - was Euclid probe in place of the inductive probe -
+  * TAP - was Euclid probe in place of the inductive probe - https://github.com/VoronDesign/Voron-Tap
   * LED effects for use with StealthBurner 
   * Kiauh g-code shell extension
   * BTT filament runout sensor
   * Klipper Expander board - for case lights
   * Rasberry Pico for resonance testing, usb portable
-  * Tap https://github.com/VoronDesign/Voron-Tap
 
 
 Software Used:  
