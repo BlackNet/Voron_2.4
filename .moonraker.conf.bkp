@@ -106,3 +106,9 @@ origin = https://github.com/Kragrathea/pgcode.git
 path = ~/pgcode
 is_system_service = False
 
+[update_manager fluidd]
+type = web
+channel = stable
+repo = fluidd-core/fluidd
+path = ~/fluidd
+
