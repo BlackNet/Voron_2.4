@@ -121,14 +121,4 @@ class SGP40:
 
 if __name__ == '__main__':
     sgp = SGP40()
-#   time.sleep(0.5)
-#q    try:
-#        while True:
-            # print("Raw Gas: ", sgp.raw())
-#            print("\r\n /-------------------------------------------------------------/ \r\n")
     print("measureRaw Gas: %d" %sgp.measureRaw(25, 50))
-            
-#            time.sleep(0.5)
-
-#    except KeyboardInterrupt:
-#        exit()
