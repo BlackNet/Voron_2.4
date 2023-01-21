@@ -127,12 +127,8 @@ class SGP40:
 if __name__ == '__main__':
     sgp = SGP40()
 
-    print ("type is:")
-    print (type(sys.argv[1]))
-    print (sys.argv)
-
+    # '/home/pi/printer_data/config/VOC/get_sgp40.py', '19.14', '20.19'
+    # TEMP and HUMIDITY is arguments from temp/humidity sensor
     TEMP=int(round(float(sys.argv[1].replace(',',''))))
     HUMIDITY=int(round(float(sys.argv[2].replace(',',''))))
-#    TEMP=((sys.argv[1]))
-#    HUMIDITY=((sys.argv[2]))
     print("measureRaw Gas: %d" %sgp.measureRaw(TEMP, HUMIDITY) )
