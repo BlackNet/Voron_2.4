@@ -8,6 +8,10 @@ import struct
 import smbus
 # import ctypes
 
+#command line argument:  Temp Humidity
+# i.e. sgp40.py 40 50 <- would be 40C and 50%.
+
+
 # voc = ctypes.cdll.LoadLibrary('./voclib.so')
 
 SGP40_CMD_FEATURE_SET = [0x20, 0x2F]
@@ -121,4 +125,9 @@ class SGP40:
 
 if __name__ == '__main__':
     sgp = SGP40()
-    print("measureRaw Gas: %d" %sgp.measureRaw(25, 50))
+
+    #sys.argv[i]
+    TEMP=int(sys.argv[1])
+    HUMIDITY=int(sys.argv[2])
+
+    print("measureRaw Gas: %d" %sgp.measureRaw(TEMP, HUMIDITY))
