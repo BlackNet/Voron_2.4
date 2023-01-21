@@ -8,3 +8,7 @@ BME sensor has pseudo built in support for klipper, SGP30/40 however does not.
 
 Working on scripts to include SGP30/40 sensors with klipper.
 
+
+* SGP30 includes SGP30 AND SGP40 sensors.
+** macro SGP_VOC starts sensor logging
+** macro SGP_VOC STOP=1 stops logging
