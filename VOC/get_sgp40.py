@@ -6,6 +6,7 @@ import time
 import math
 import struct
 import smbus
+import re
 # import ctypes
 
 #command line argument:  Temp Humidity
@@ -126,8 +127,12 @@ class SGP40:
 if __name__ == '__main__':
     sgp = SGP40()
 
-    #sys.argv[i]
-    TEMP=int(sys.argv[1])
-    HUMIDITY=int(sys.argv[2])
+    print ("type is:")
+    print (type(sys.argv[1]))
+    print (sys.argv)
 
-    print("measureRaw Gas: %d" %sgp.measureRaw(TEMP, HUMIDITY))
+    TEMP=int(round(float(sys.argv[1].replace(',',''))))
+    HUMIDITY=int(round(float(sys.argv[2].replace(',',''))))
+#    TEMP=((sys.argv[1]))
+#    HUMIDITY=((sys.argv[2]))
+    print("measureRaw Gas: %d" %sgp.measureRaw(TEMP, HUMIDITY) )
