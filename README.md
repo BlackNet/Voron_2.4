@@ -2,6 +2,17 @@
 
 This is a Voron 2.4r2 build.  This is a work in progress and here I am documenting the journey, hardware, software, misc.
 
+Sections include:
+* PI
+** boot startup
+** PWM settings
+** camera settings
+** dt-blob.bin file
+
+* Klipper script for auto MCU builds on version changes
+* Theme files
+* VOC (Volatile Organic Chemical) sensor usage.
+
 
 
 Hardware:
