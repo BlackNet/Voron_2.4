@@ -52,3 +52,17 @@ Then to set them 'active' in the filesystem
 This can be changed in /etc/rc.local before 'exit'
 
 
+  --------------------
+** cloud support **
+
+
+Wait for network on boot
+To get current network on boot setting: sudo raspi-config nonint get_boot_wait
+To enable waiting for network on boot: sudo raspi-config nonint do_boot_wait 0
+
+
+setup ~/printer_data as a mount point for any cloud service, onedrive, google drive, dropbox, etc...
+
+install klipper/etc.
+
+
