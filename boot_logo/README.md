@@ -61,8 +61,14 @@ To get current network on boot setting: sudo raspi-config nonint get_boot_wait
 To enable waiting for network on boot: sudo raspi-config nonint do_boot_wait 0
 
 
-setup ~/printer_data as a mount point for any cloud service, onedrive, google drive, dropbox, etc...
+setup ~/cloud as a mount point for any cloud service, onedrive, google drive, dropbox, etc...
 
 install klipper/etc.
+* Can backup to ~/cloud/ any time and read files from there i.e. gcode.
+* gcode path works good
+* log files and scripts is bad to use on cloud services.
+* config files causes problems on startup, cloud service MUST start before klipper service for error free.
+
+*ANY* network disruption happens and you loose your printer if you use cloud based config.
 
 
