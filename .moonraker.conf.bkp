@@ -99,13 +99,6 @@ origin = https://github.com/protoloft/klipper_z_calibration.git
 install_script = install.sh
 managed_services = klipper
 
-[update_manager pgcode]
-type = git_repo
-primary_branch = main
-origin = https://github.com/Kragrathea/pgcode.git
-path = ~/pgcode
-is_system_service = False
-
 [update_manager fluidd]
 type = web
 channel = stable
