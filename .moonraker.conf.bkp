@@ -22,6 +22,7 @@ cors_domains =
 	http://my.mainsail.xyz
 	https://app.fluidd.xyz
 	http://app.fluidd.xyz
+	https://klippylyzer.github.io
 	*:7136
 	*.local:7136
 
