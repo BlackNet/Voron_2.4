@@ -13,6 +13,7 @@ trusted_clients =
 	100.75.228.29
 	100.87.93.65
 	100.126.37.42
+	100.82.60.125
 	FE80::/10
 	::1/128
 cors_domains = 
@@ -22,7 +23,6 @@ cors_domains =
 	http://my.mainsail.xyz
 	https://app.fluidd.xyz
 	http://app.fluidd.xyz
-	https://klippylyzer.github.io
 	*:7136
 	*.local:7136
 
