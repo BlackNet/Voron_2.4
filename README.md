@@ -59,6 +59,7 @@ Software Used:
   * GitHub for backup/sharing
   * Crowsnest for webcam
   * Auto_Z for z offset. https://github.com/protoloft/klipper_z_calibration
+  * Mobileraker companion https://github.com/Clon1998/mobileraker_companion
 
 
 :install:
@@ -70,6 +71,8 @@ Software Used:
   * install klipperscreen
   * install gcode shell command
   * install theme - Mainsail x Voron Toolhead
+  * install Mobileraker companion - for notifications
+  
 
 * create a symlink for new config.  
   * ln -s ./printer_data/config/ ./klipper_config
