@@ -4,6 +4,7 @@ port = 7125
 klippy_uds_address = /home/pi/printer_data/comms/klippy.sock
 
 [authorization]
+force_logins = false
 trusted_clients = 
 	10.0.0.0/8
 	127.0.0.0/8
@@ -22,7 +23,6 @@ cors_domains =
 	http://my.mainsail.xyz
 	https://app.fluidd.xyz
 	http://app.fluidd.xyz
-	https://klippylyzer.github.io
 	*:7136
 	*.local:7136
 
