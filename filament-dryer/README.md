@@ -39,7 +39,7 @@ restart_delay: 3<br/>
 [gcode_macro DRYER_OFF]<br/>
 gcode:<br/>
   {action_call_remote_method(<br/>
-    "set_device_power", device="printer", state="off"<br/>
+    "set_device_power", device="Dryer", state="off"<br/>
   )}<br/>
 <br/>
 <br/>
@@ -47,7 +47,7 @@ gcode:<br/>
 [gcode_macro DRYER_ON]<br/>
 gcode:<br/>
   {action_call_remote_method(<br/>
-    "set_device_power", device="printer", state="on"<br/>
+    "set_device_power", device="Dryer", state="on"<br/>
   )}<br/>
 <br/>
   </code>
