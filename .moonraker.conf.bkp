@@ -40,7 +40,7 @@ enable_object_processing = True
 
 [timelapse]
 
-[power Filament Dryer]
+[power Dryer]
 type = tplink_smartplug
 address = 192.168.1.177
 output_id = 0
