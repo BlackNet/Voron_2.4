@@ -13,37 +13,41 @@ BOM:
 * 280 Watt food Dehydrator - https://a.co/d/17a5nK8
 
 
--- Settings --
-
-in moonraker.cfg
-
-[power Dryer]
-type: tplink_smartplug
-address: 192.168.1.177      # <<<----- your device IP here.
-output_id: 0
-restart_delay: 3
 
 
 
-in macro's
 
-[temperature_sensor Dehydrator]
-  sensor_type: HTU21D       # <<<----- your sensor type here.
-  i2c_address:64            # <<<----- your id of the sensor
-  i2c_mcu: rpi              #  <<<----- device the sensor is plugged into
-  i2c_bus: i2c.1            # <<<----- your the i2c bus of the device
+# in moonraker.cfg
+<code>
+[power Dryer]<br/>
+type: tplink_smartplug<br/>
+address: 192.168.1.177      # <<<----- your device IP here.<br/>
+output_id: 0<br/>
+restart_delay: 3<br/>
+<br/>
+</code>
 
-# Macro to turn OFF the filament dryer
-[gcode_macro DRYER_OFF]
-gcode:
-  {action_call_remote_method(
-    "set_device_power", device="printer", state="off"
-  )}
-
-
-# Macro to turn ON the filament dryer
-[gcode_macro DRYER_ON]
-gcode:
-  {action_call_remote_method(
-    "set_device_power", device="printer", state="on"
-  )}
+# Macro's
+<code>
+[temperature_sensor Dehydrator]<br/>
+  sensor_type: HTU21D    # <<<----- your sensor type here.<br/>
+  i2c_address:64         # <<<----- your id of the sensor<br/>
+  i2c_mcu: rpi           #  <<<----- device the sensor is plugged into<br/>
+  i2c_bus: i2c.1         # <<<----- your the i2c bus of the device<br/>
+<br/>
+#Macro to turn OFF the filament dryer<br/>
+[gcode_macro DRYER_OFF]<br/>
+gcode:<br/>
+  {action_call_remote_method(<br/>
+    "set_device_power", device="printer", state="off"<br/>
+  )}<br/>
+<br/>
+<br/>
+#Macro to turn ON the filament dryer<br/>
+[gcode_macro DRYER_ON]<br/>
+gcode:<br/>
+  {action_call_remote_method(<br/>
+    "set_device_power", device="printer", state="on"<br/>
+  )}<br/>
+<br/>
+  </code>
