@@ -26,6 +26,7 @@ cors_domains =
 	http://my.mainsail.xyz
 	https://app.fluidd.xyz
 	http://app.fluidd.xyz
+	*.local:7135
 	*:7136
 	*.local:7136
 
