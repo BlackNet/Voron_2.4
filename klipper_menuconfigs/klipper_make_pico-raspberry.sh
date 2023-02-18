@@ -29,4 +29,8 @@ sudo service klipper stop
 make flash FLASH_DEVICE=${mcu_list[$flash_dev-1]} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pico
 sudo service klipper start
 
+sudo usbreset
+
+echo -e run sudo usbreset XXXX:YYYY to reset usb channel
+
 
