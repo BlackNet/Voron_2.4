@@ -29,12 +29,11 @@ Hardware:
   * Upgraded heatsink on TMC drivers, 10x10x13mm
   * USB 3.0 Keystone Jack Insert to PI
   * Cat 5 ethernet keystone Jack Insert to PI
-  * Pi hardware:
+  * Pi hardware - test setup:
     * Pi CM4 4GB RAM, 16GB eMMC, 2.4/5.0GHz Wi-Fi & Bluetooth 5.0 (CM4104016)
     * Oratec TOFU carrier board
     * geekpi cm4 heatsink w/ fan
-    *
-    * -OR-
+  * Pi hardware - printer:
     * Pi4 8g    
   * BTT PITFT50 V2.0 5inch LCD touchscreen
   * TP-link Smart Strip for:
