@@ -48,6 +48,7 @@ Hardware:
   * BTT filament runout sensor
   * Klipper Expander board - for case lights
   * Rasberry Pico for resonance testing, usb portable
+  * Nevermore with 2x 5015 fans.
 
 
 Software Used:  
@@ -72,16 +73,11 @@ Software Used:
   * install gcode shell command
   * install theme - Mainsail x Voron Toolhead
   * install Mobileraker companion - for notifications
-  
-
-* create a symlink for new config.  
-  * ln -s ./printer_data/config/ ./klipper_config
-
-* install moonraker timelapse = https://github.com/mainsail-crew/moonraker-timelapse
-* install led effects = https://github.com/julianschill/klipper-led_effect
-* install Klipper host MCU = https://www.klipper3d.org/RPi_microcontroller.html
-* install Crowsnest for camera = https://github.com/mainsail-crew/crowsnest
-* install Tailscale for remove VPN = https://tailscale.com/
+  * install moonraker timelapse = https://github.com/mainsail-crew/moonraker-timelapse
+  * install led effects = https://github.com/julianschill/klipper-led_effect
+  * install Klipper host MCU = https://www.klipper3d.org/RPi_microcontroller.html
+  * install Crowsnest for camera = https://github.com/mainsail-crew/crowsnest
+  * install Tailscale for remove VPN = https://tailscale.com/
 
 
 
@@ -95,6 +91,4 @@ runout sensor
 input shaping
 
 HD camera mount
-
-Nevermore setup
 
