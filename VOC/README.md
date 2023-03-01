@@ -13,3 +13,5 @@ Working on scripts to include SGP30/40 sensors with klipper.
  ** macro SGP_VOC starts sensor logging.
  ** macro SGP_VOC STOP=1 stops logging.
  
+changes for fluidd to integrate SGP40 sensor
+`grep -l '\["bme280","htu21d"\]' * -R | xargs sed -i 's/"bme280","htu21d"/"bme280","htu21d","SGP40"/g' `
