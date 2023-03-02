@@ -10,4 +10,4 @@ SGP40 setup from https://github.com/nevermore3d/Nevermore_Max/tree/master/Softwa
 
 Changes for fluidd or mainsail to integrate SGP40 sensor, does not duplicate addition but may need to be reran after update to fluidd.
 
-* <code>grep -l '["bme280","htu21d"]' {fluidd/,mainsail/} -R | xargs sed -i 's/"bme280","htu21d"/"bme280","htu21d","sgp40"/g' </code>
+* <code> cd ~/ && grep -l '\["bme280","htu21d"\]' {fluidd/*,mainsail/*} -R | xargs sed -i 's/"bme280","htu21d"/"bme280","htu21d","sgp40"/g' </code>
