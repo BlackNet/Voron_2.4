@@ -6,3 +6,4 @@ rm mainsail.zip
 
 # Restart services
 sudo service nginx restart
+
