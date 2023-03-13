@@ -12,4 +12,6 @@ Changes for fluidd or mainsail to integrate SGP40 sensor, does not duplicate add
 
 * ```cd ~/ && grep -l '\["bme280","htu21d"\]' {fluidd/*,mainsail/*} -R | xargs sed -i 's/"bme280","htu21d"/"bme280","htu21d","sgp40"/g' ```
 
+sudo pip3 install adafruit-circuitpython-sgp40
+
 

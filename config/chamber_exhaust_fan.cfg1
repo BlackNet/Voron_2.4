@@ -2,7 +2,7 @@
 #####################################################################
 # Temperature-controlled exhaust fan
 #####################################################################
-[temperature_fan chamber]
+[temperature_fan chamber1]
   pin: FAN4
   max_power: 1.0
   max_speed: 1.0
