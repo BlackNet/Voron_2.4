@@ -112,23 +112,12 @@ channel = stable
 repo = fluidd-core/fluidd
 path = ~/fluidd
 
-[update_manager mobileraker]
+[update_manager fluidd-config]
 type = git_repo
-path = ~/mobileraker_companion
-origin = https://github.com/Clon1998/mobileraker_companion.git
-primary_branch = main
-managed_services = mobileraker
-env = ~/mobileraker-env/bin/python
-requirements = scripts/mobileraker-requirements.txt
-install_script = scripts/install-mobileraker-companion.sh
-
-[update_manager klipper-nevermore-max]
-type = git_repo
-origin = https://github.com/nknotts/klipper-nevermore-max.git
-path = /home/pi/klipper-nevermore-max
-install_script = install_klipper.sh
+primary_branch = master
+path = ~/fluidd-config
+origin = https://github.com/fluidd-core/fluidd-config.git
 managed_services = klipper
-primary_branch = main
 
 [update_manager fluidd-config]
 type = git_repo
