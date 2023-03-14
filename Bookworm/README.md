@@ -5,6 +5,8 @@ sudo sed -i 's/bullseye/bookworm/g' /etc/apt/sources.list
 sudo sed -i 's/bullseye/bookworm/g' /etc/apt/sources.list.d/raspi.list
 ```
 
+some GPG keys will need to be upgrade. i.e. tailscale
+
 first we have to update the repo and upgrade the base.
 ```
 sudo apt update && sudo apt upgrade -y 
