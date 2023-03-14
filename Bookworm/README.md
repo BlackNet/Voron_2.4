@@ -21,7 +21,7 @@ sudo apt autoremove -y
 
 some packages will want confirmation to update config files,  one option is just say Y on all.  you can do D to display the differences.
 
-
+```
 Configuration file 'xxxxxxxxxxx'
  ==> Modified (by you or by a script) since installation.
  ==> Package distributor has shipped an updated version.
@@ -32,6 +32,7 @@ Configuration file 'xxxxxxxxxxx'
       Z     : start a shell to examine the situation
  The default action is to keep your current version.
 *** rsyslog (Y/I/N/O/D/Z) [default=N] ?
+```
 
 
 fails with libmpv-dev
