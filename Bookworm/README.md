@@ -3,7 +3,13 @@ mainsailos -> bookworm confersion
 sudo sed -i 's/bullseye/bookworm/g' /etc/apt/sources.list
 sudo sed -i 's/bullseye/bookworm/g' /etc/apt/sources.list.d/raspi.list
 
-sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
+first we have to update the repo and upgrade the base.
+sudo apt update && sudo apt upgrade -y 
+
+followed by these
+
+sudo apt full-upgrade -y 
+sudo apt autoremove -y
 
 some packages will want confirmation to update config files,  one option is just say Y on all.  you can do D to display the differences.
 
