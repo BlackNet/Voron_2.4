@@ -44,4 +44,6 @@ reboot
 reinstall klipper
 reinstall moonraker
 
+notes for bookworm changes to date.
+* python is now forced to be in virtual environments
 
