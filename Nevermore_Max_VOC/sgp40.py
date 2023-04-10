@@ -179,8 +179,9 @@ class SGP40:
         return {
             'temperature': self.temp,
             'humidity': self.humidity,
-            'gas': self.raw,
-            'voc': self.voc,
+            'gas': self.voc,
+            'voc': self.raw,
+            #numbers reversed for fluidd only showing gas values
         }
 
 def load_config(config):
