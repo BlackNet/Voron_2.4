@@ -26,7 +26,7 @@ class SGP40:
         self.name = config.get_name().split()[-1]
         self.reactor = self.printer.get_reactor()
         self.i2c = bus.MCU_I2C_from_config(
-            config, default_addr=SGP40_CHIP_ADDR, default_speed=100000)
+            config, default_addr=SGP40_CHIP_ADDR, default_speed=400000)
         self.temp_sensor = config.get('ref_temp_sensor', None)
         self.humidity_sensor = config.get('ref_humidity_sensor', None)
         self.mcu = self.i2c.get_mcu()
@@ -52,7 +52,7 @@ class SGP40:
         # This is harcoded in serialhdl.py in Klipper
         def get_response(self, cmds, cmd_queue, minclock=0, reqclock=0):
             retries = 15
-            retry_delay = .010
+            retry_delay = .020
             while 1:
                 for cmd in cmds[:-1]:
                     self.serial.raw_send(cmd, minclock, reqclock, cmd_queue)
