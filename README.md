@@ -41,12 +41,10 @@ Hardware:
     * Filament Dryer,
     * Heated bed (coming soon)
   * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust, silent and variable speed.
-  * TAP - was Euclid probe in place of the inductive probe - https://github.com/VoronDesign/Voron-Tap
+  * (not used) TAP - was Euclid probe in place of the inductive probe - https://github.com/VoronDesign/Voron-Tap
   * LED effects for use with StealthBurner 
   * Kiauh g-code shell extension
-  * BTT filament runout sensor
-  * Klipper Expander board - for case lights
-  * Rasberry Pico for resonance testing, usb portable
+  * (defunct, not using) Klipper Expander board - for case lights
   * Nevermore with 2x 5015 fans.
 
 
@@ -58,7 +56,6 @@ Software Used:
   * Tailscale for VPN
   * GitHub for backup/sharing
   * Crowsnest for webcam
-  * Auto_Z for z offset. https://github.com/protoloft/klipper_z_calibration
   * Mobileraker companion https://github.com/Clon1998/mobileraker_companion
 
 
@@ -86,8 +83,6 @@ Software Used:
 replace euclid with TAP 
 
 runout sensor
-
-input shaping
 
 HD camera mount
 
