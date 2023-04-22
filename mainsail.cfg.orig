@@ -15,14 +15,14 @@
 # SDCard location
 #####################################################################
 
-[virtual_sdcard]
-path: ~/printer_data/gcodes
-on_error_gcode:
-  CANCEL_PRINT
+# [virtual_sdcard]
+# path: ~/printer_data/gcodes
+# on_error_gcode:
+#   CANCEL_PRINT
 
-[pause_resume]
+# [pause_resume]
 
-[display_status]
+# [display_status]
 
 
 #####################################################################
