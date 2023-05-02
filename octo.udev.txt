@@ -1,0 +1,50 @@
+P: /devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.2/1-1.2:1.0/tty/ttyACM0
+M: ttyACM0
+R: 0
+U: tty
+D: c 166:0
+N: ttyACM0
+L: 0
+S: serial/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1.2:1.0
+S: serial/by-id/usb-Klipper_stm32f446xx_14001A00095053424E363420-if00
+S: octopus
+E: DEVPATH=/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.2/1-1.2:1.0/tty/ttyACM0
+E: DEVNAME=/dev/ttyACM0
+E: MAJOR=166
+E: MINOR=0
+E: SUBSYSTEM=tty
+E: USEC_INITIALIZED=554620456
+E: ID_BUS=usb
+E: ID_MODEL=stm32f446xx
+E: ID_MODEL_ENC=stm32f446xx
+E: ID_MODEL_ID=614e
+E: ID_SERIAL=Klipper_stm32f446xx_14001A00095053424E363420
+E: ID_SERIAL_SHORT=14001A00095053424E363420
+E: ID_VENDOR=Klipper
+E: ID_VENDOR_ENC=Klipper
+E: ID_VENDOR_ID=1d50
+E: ID_REVISION=0100
+E: ID_TYPE=generic
+E: ID_USB_MODEL=stm32f446xx
+E: ID_USB_MODEL_ENC=stm32f446xx
+E: ID_USB_MODEL_ID=614e
+E: ID_USB_SERIAL=Klipper_stm32f446xx_14001A00095053424E363420
+E: ID_USB_SERIAL_SHORT=14001A00095053424E363420
+E: ID_USB_VENDOR=Klipper
+E: ID_USB_VENDOR_ENC=Klipper
+E: ID_USB_VENDOR_ID=1d50
+E: ID_USB_REVISION=0100
+E: ID_USB_TYPE=generic
+E: ID_USB_INTERFACES=:020201:0a0000:
+E: ID_USB_INTERFACE_NUM=00
+E: ID_USB_DRIVER=cdc_acm
+E: ID_USB_CLASS_FROM_DATABASE=Communications
+E: ID_VENDOR_FROM_DATABASE=OpenMoko, Inc.
+E: ID_PATH=platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1.2:1.0
+E: ID_PATH_TAG=platform-fd500000_pcie-pci-0000_01_00_0-usb-0_1_2_1_0
+E: ID_FOR_SEAT=tty-platform-fd500000_pcie-pci-0000_01_00_0-usb-0_1_2_1_0
+E: ID_MM_CANDIDATE=1
+E: DEVLINKS=/dev/serial/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1.2:1.0 /dev/serial/by-id/usb-Klipper_stm32f446xx_14001A00095053424E363420-if00 /dev/octopus
+E: TAGS=:systemd:seat:uaccess:
+E: CURRENT_TAGS=:systemd:seat:uaccess:
+
