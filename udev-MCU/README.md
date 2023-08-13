@@ -8,7 +8,7 @@ Look for the tag labeled like this
 ``ID_SERIAL=Klipper_stm32f446xx_14001A00095053424E363420``
 
 
-Second: Edit /etc/udev/rules.d/local.rules, may need to create the file.
+Second: Edit /etc/udev/rules.d/local.rules, may need to create the file.  Use this template and replace the serial "number" and "symlink".
 
 ``SUBSYSTEM=="tty",ENV{ID_SERIAL}=="Klipper_stm32f446xx_090038001650335331383520",SYMLINK+="octopus",MODE="0666",GROUP="dialout"
 SUBSYSTEM=="tty",ENV{ID_SERIAL}=="Klipper_rp2040_E6605481DB58BB36",SYMLINK+="pico",MODE="0666",GROUP="dialout"
