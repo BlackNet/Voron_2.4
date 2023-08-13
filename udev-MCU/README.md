@@ -2,7 +2,7 @@ Setting a UDEV rule to show a device in /dev/MyName instead of using the /dev/se
 even works with the broken udev release.
 
 First: Find your unique serial number
-``udevadm info /dev/<device>`` where device would be ttyACM0 or ttyACM1, or /dev/serial/by-id/<device>
+``udevadm info /dev/<device>`` where device would be like ttyACM0, ttyACM1, or /dev/serial/by-id/device
 
 Look for the tag labeled like this
 ``ID_SERIAL=Klipper_stm32f446xx_14001A00095053424E363420``
