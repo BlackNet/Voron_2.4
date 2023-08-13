@@ -1,4 +1,4 @@
-Setting a UDEV rule to show a device in /dev/MyName instead of using the /by-id or /by-path, 
+Setting a UDEV rule to show a device in /dev/MyName instead of using the /dev/serial/by-id or /dev/serial/by-path, 
 even works with the broken udev release.
 
 First: Find your unique serial number
