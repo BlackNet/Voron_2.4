@@ -24,24 +24,24 @@ Hardware:
   * Printed parts from West3d
     * Updated Mod for Stealthburner for Rapido UFH
   * Octopus 1.1 board, STM32F446
-  * vivedino rails with Mobilux NGLI-1 lube
+  * Vivendio rails with Mobilux NGLI-1 lube
   * Vivendio bed heater, 110v 650W NTC100K b3950
   * Upgraded heatsink on TMC drivers, 10x10x13mm
   * USB 3.0 Keystone Jack Insert to PI
   * Cat 5 ethernet keystone Jack Insert to PI
-  * Pi hardware - test setup:
+  * Pi hardware:
     * Pi CM4 4GB RAM, 16GB eMMC, 2.4/5.0GHz Wi-Fi & Bluetooth 5.0 (CM4104016)
     * Oratec TOFU carrier board
     * geekpi cm4 heatsink w/ fan
-  * Pi hardware - printer:
-    * Pi4 8g    
+    * WD Blue SN570 1TB as root
   * BTT PITFT50 V2.0 5inch LCD touchscreen
   * TP-link Smart Strip for:
     * Printer
     * Filament Dryer,
     * Heated bed (coming soon)
   * Noctua NF-A6x25 FLX, 2x case fan and 1x exhaust, silent and variable speed.
-  * (not used) TAP - was Euclid probe in place of the inductive probe - https://github.com/VoronDesign/Voron-Tap
+  * TAP - was Euclid probe in place of the inductive probe - https://github.com/VoronDesign/Voron-Tap
+  * CNC TAP hardware - https://etsy.com/shop/Vitalii3D
   * LED effects for use with StealthBurner 
   * Kiauh g-code shell extension
   * (defunct, not using) Klipper Expander board - for case lights
