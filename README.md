@@ -82,7 +82,7 @@ Software Used:
 
 :TODO:
 
-replace euclid with TAP 
+replace euclid with TAP, DONE
 
 runout sensor
 
