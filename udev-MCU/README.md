@@ -15,13 +15,21 @@ SUBSYSTEM=="tty",ENV{ID_SERIAL}=="Klipper_rp2040_E6605481DB58BB36",SYMLINK+="pic
 SUBSYSTEM=="tty",ENV{ID_SERIAL}=="Klipper_stm32f072xb_480033001853565639333820",SYMLINK+="voron-skirt",MODE="0666",GROUP="dialout"
 ``
 
-This gives /dev/octopus for a very specific board.  for *ANY* octopus board use the following
+In my setup, the first line creates /dev/octopus, the second line creates ``/dev/pico``, and the third creates ``/dev/voron-skirt``.
 
+
+This gives /dev/octopus for a very specific board.  For *ANY* octopus board, use the following
 ``
 SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="stm32f446xx",SYMLINK+="octopus",MODE="0666",GROUP="dialout"
 ``
 
-In my setup, the first line creates /dev/octopus, the second line creates ``/dev/pico``, and the third creates ``/dev/voron-skirt``.
+
+For ONLY octopus boards that have been flashed with Klipper.
+``
+SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="stm32f446xx",ENV{ID_USB_VENDOR_ENC}="Klipper",SYMLINK+="octopus",MODE="0666",GROUP="dialout"
+``
+
+
 
 save/exit 
 
