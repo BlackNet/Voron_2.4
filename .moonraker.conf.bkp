@@ -1,7 +1,9 @@
 [server]
 host = 0.0.0.0
 port = 7125
+ssl_port = 7130
 klippy_uds_address = /home/pi/printer_data/comms/klippy.sock
+max_upload_size = 1024000
 
 [authorization]
 trusted_clients = 
@@ -10,34 +12,119 @@ trusted_clients =
 	169.254.0.0/16
 	172.16.0.0/12
 	192.168.0.0/16
+	100.75.228.29
+	100.87.93.65
+	100.126.37.42
+	100.82.60.125
+	100.71.251.84
+	100.79.240.92
+	100.85.205.130
 	FE80::/10
 	::1/128
 cors_domains = 
-	*.lan
-	*.local
-	*://localhost
-	*://localhost:*
-	*://my.mainsail.xyz
-	*://app.fluidd.xyz
+	http://*.lan
+	http://*.local
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	https://app.fluidd.xyz
+	http://app.fluidd.xyz
+	*.local:7135
+	*:7136
+	*.local:7136
+force_logins = false
+
+[database]
+
+[file_manager]
+enable_object_processing = True
 
 [octoprint_compat]
 
 [history]
 
+[timelapse]
+output_path = ~/printer_data/timelapse/
+frame_path = /tmp/timelapse/printer
+
+[power Dryer]
+type = tplink_smartplug
+address = 192.168.1.177
+output_id = 0
+restart_klipper_when_powered = True
+restart_delay = 3
+
+[power Ender-5]
+type = tplink_smartplug
+address = 192.168.1.177
+output_id = 1
+restart_klipper_when_powered = True
+restart_delay = 3
+
+[power Octopi]
+type = tplink_smartplug
+address = 192.168.1.177
+output_id = 2
+restart_klipper_when_powered = True
+restart_delay = 3
+
 [update_manager]
 channel = dev
 refresh_interval = 168
-
-[update_manager mainsail-config]
-type = git_repo
-primary_branch = master
-path = ~/mainsail-config
-origin = https://github.com/mainsail-crew/mainsail-config.git
-managed_services = klipper
 
 [update_manager mainsail]
 type = web
 channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
+
+[update_manager KlipperScreen]
+type = git_repo
+path = /home/pi/KlipperScreen
+origin = https://github.com/jordanruthe/KlipperScreen.git
+env = /home/pi/.KlipperScreen-env/bin/python
+requirements = scripts/KlipperScreen-requirements.txt
+install_script = scripts/KlipperScreen-install.sh
+
+[update_manager timelapse]
+type = git_repo
+primary_branch = main
+path = ~/moonraker-timelapse
+origin = https://github.com/mainsail-crew/moonraker-timelapse.git
+managed_services = klipper moonraker
+
+[update_manager led_effect]
+type = git_repo
+path = ~/klipper-led_effect
+origin = https://github.com/julianschill/klipper-led_effect.git
+is_system_service = False
+
+[update_manager fluidd]
+type = web
+channel = stable
+repo = fluidd-core/fluidd
+path = ~/fluidd
+
+[update_manager mobileraker]
+type = git_repo
+path = ~/mobileraker_companion
+origin = https://github.com/Clon1998/mobileraker_companion.git
+primary_branch = main
+managed_services = mobileraker
+env = ~/mobileraker-env/bin/python
+requirements = scripts/mobileraker-requirements.txt
+install_script = scripts/install-mobileraker-companion.sh
+
+[update_manager ercf-happy_hare]
+type = git_repo
+path = ~/ERCF-Software-V3
+origin = https://github.com/moggieuk/ERCF-Software-V3.git
+install_script = install.sh
+managed_services = klipper
+
+[update_manager fluidd-config]
+type = git_repo
+primary_branch = master
+path = ~/fluidd-config
+origin = https://github.com/fluidd-core/fluidd-config.git
+managed_services = klipper
 
