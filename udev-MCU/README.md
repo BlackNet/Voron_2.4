@@ -29,6 +29,11 @@ For ONLY octopus boards that have been flashed with Klipper.
 SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="stm32f446xx",ENV{ID_USB_VENDOR_ENC}="Klipper",SYMLINK+="octopus",MODE="0666",GROUP="dialout"
 ``
 
+Boards like the Easy BRD board for ERCF.
+``
+SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="samd21g18a",ENV{ID_USB_VENDOR_ENC}="Klipper",SYMLINK+="serial/by-id/ERCF-EASY-BRD",MODE="0666",GROUP="dialout"
+``
+
 
 
 save/exit 
