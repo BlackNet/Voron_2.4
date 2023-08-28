@@ -23,6 +23,12 @@ This gives /dev/octopus for a very specific board.  For *ANY* octopus board, use
 SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="stm32f446xx",SYMLINK+="octopus",MODE="0666",GROUP="dialout"
 ``
 
+For drop locations like /dev or /dev/serial/by-id/ you can add that as well.  The first is /dev/serial/by-id/octopus and second is just plain /dev/octopus
+``
+SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="stm32f446xx",ENV{ID_USB_VENDOR_ENC}="Klipper",SYMLINK+="serial/by-id/octopus",MODE="0666",GROUP="dialout"
+SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="stm32f446xx",ENV{ID_USB_VENDOR_ENC}="Klipper",SYMLINK+="octopus",MODE="0666",GROUP="dialout"
+``
+
 
 For ONLY octopus boards that have been flashed with Klipper.
 ``
