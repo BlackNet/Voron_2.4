@@ -19,7 +19,7 @@ Hardware:
 
   * Platform: Formbot 350mm Kit
   * Moons' motors NS17HD6P420I-04 1.8deg
-  * Rapido UFH plus hotend
+  * Rapido v2.0 UFH plus hotend
   * TMC2209 stepper drivers
   * Printed parts from West3d
     * Updated Mod for Stealthburner for Rapido UFH
