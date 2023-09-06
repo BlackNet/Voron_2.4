@@ -42,11 +42,7 @@ enable_object_processing = True
 
 [history]
 
-[timelapse]
-output_path = ~/printer_data/timelapse/
-frame_path = /tmp/timelapse/printer
-
-[power Dryer]
+[power LR_plug0]
 type = tplink_smartplug
 address = 192.168.1.177
 output_id = 0
@@ -64,6 +60,27 @@ restart_delay = 3
 type = tplink_smartplug
 address = 192.168.1.177
 output_id = 2
+restart_klipper_when_powered = True
+restart_delay = 3
+
+[power Voron V2.4952]
+type = tplink_smartplug
+output_id = 0
+address = 192.168.1.65
+restart_klipper_when_powered = True
+restart_delay = 3
+
+[power Dryer]
+type = tplink_smartplug
+output_id = 1
+address = 192.168.1.65
+restart_klipper_when_powered = True
+restart_delay = 3
+
+[power MagLight]
+type = tplink_smartplug
+output_id = 2
+address = 192.168.1.65
 restart_klipper_when_powered = True
 restart_delay = 3
 
@@ -85,13 +102,6 @@ env = /home/pi/.KlipperScreen-env/bin/python
 requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 
-[update_manager timelapse]
-type = git_repo
-primary_branch = main
-path = ~/moonraker-timelapse
-origin = https://github.com/mainsail-crew/moonraker-timelapse.git
-managed_services = klipper moonraker
-
 [update_manager led_effect]
 type = git_repo
 path = ~/klipper-led_effect
@@ -104,27 +114,20 @@ channel = stable
 repo = fluidd-core/fluidd
 path = ~/fluidd
 
-[update_manager mobileraker]
-type = git_repo
-path = ~/mobileraker_companion
-origin = https://github.com/Clon1998/mobileraker_companion.git
-primary_branch = main
-managed_services = mobileraker
-env = ~/mobileraker-env/bin/python
-requirements = scripts/mobileraker-requirements.txt
-install_script = scripts/install-mobileraker-companion.sh
-
-[update_manager ercf-happy_hare]
-type = git_repo
-path = ~/ERCF-Software-V3
-origin = https://github.com/moggieuk/ERCF-Software-V3.git
-install_script = install.sh
-managed_services = klipper
-
 [update_manager fluidd-config]
 type = git_repo
 primary_branch = master
 path = ~/fluidd-config
 origin = https://github.com/fluidd-core/fluidd-config.git
 managed_services = klipper
+
+[update_manager mobileraker]
+type = git_repo
+path = /home/pi/mobileraker_companion
+origin = https://github.com/Clon1998/mobileraker_companion.git
+primary_branch = main
+managed_services = mobileraker
+env = /home/pi/mobileraker-env/bin/python
+requirements = scripts/mobileraker-requirements.txt
+install_script = scripts/install-mobileraker-companion.sh
 
