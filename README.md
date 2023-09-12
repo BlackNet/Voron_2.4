@@ -52,11 +52,11 @@ Software Used:
 
   * OS: Raspberry Pi ARM64, based on Debian bullseye.
   * kiauh https://git.io/JnmlX for base install of Klipper / Moonraker / Mainsail / KlipperScreen
-  * timelapse for timelapse videos
+  * Timelapse for timelapse videos
   * Tailscale for VPN
   * GitHub for backup/sharing
   * ~~Crowsnest~~ for webcam
-  ** Camera-streamer works under bookworm
+  * * Camera-streamer works under bookworm
   * Mobileraker companion https://github.com/Clon1998/mobileraker_companion
   * fluidd features pause_at_next_layer, pause_at_layer, pause, resume.
   
@@ -68,6 +68,7 @@ Software Used:
   * install klipper
   * install moonraker
   * install mainsail
+  * install fluidd
   * install klipperscreen
   * install gcode shell command
   * install theme - Mainsail x Voron Toolhead
@@ -75,8 +76,8 @@ Software Used:
   * install moonraker timelapse = https://github.com/mainsail-crew/moonraker-timelapse
   * install led effects = https://github.com/julianschill/klipper-led_effect
   * install Klipper host MCU = https://www.klipper3d.org/RPi_microcontroller.html
-  * install Crowsnest for camera = https://github.com/mainsail-crew/crowsnest
-  * install Tailscale for remove VPN = https://tailscale.com/
+  * ~~install Crowsnest for camera = https://github.com/mainsail-crew/crowsnest~~
+  * install Tailscale for remote VPN = https://tailscale.com/
 
 
 
