@@ -55,7 +55,8 @@ Software Used:
   * timelapse for timelapse videos
   * Tailscale for VPN
   * GitHub for backup/sharing
-  * Crowsnest for webcam
+  * ~~Crowsnest~~ for webcam
+  ** Camera-streamer works under bookworm
   * Mobileraker companion https://github.com/Clon1998/mobileraker_companion
   * fluidd features pause_at_next_layer, pause_at_layer, pause, resume.
   
