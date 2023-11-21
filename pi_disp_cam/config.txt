@@ -82,6 +82,7 @@ gpu_mem=256
 [all]
 camera_auto_detect=1
 dtoverlay=dwc2,dr_mode=host
+dtoverlay=imx477
 
 [pi3]
 gpu_mem=256
