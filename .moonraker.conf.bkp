@@ -76,14 +76,14 @@ address = 192.168.1.65
 restart_klipper_when_powered = True
 restart_delay = 3
 
-[power Dryer]
+[power X1C]
 type = tplink_smartplug
 output_id = 1
 address = 192.168.1.65
 restart_klipper_when_powered = True
 restart_delay = 3
 
-[power MagLight]
+[power VoronLights]
 type = tplink_smartplug
 output_id = 2
 address = 192.168.1.65
