@@ -1,9 +1,3 @@
-#[include mmu/base/*.cfg]
-#[include mmu/optional/client_macros.cfg]
-
-# this is for the small displays
-##[include mmu/optional/mmu_menu.cfg]
-
 [include fluidd.cfg]
 
 [virtual_sdcard]
