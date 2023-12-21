@@ -25,9 +25,6 @@ read -p "Input flash device: " flash_dev
 
 echo -e "flashing: " ${mcu_list[$flash_dev-1]}
 
-make clean
-make
-
 sudo service klipper stop
 make flash FLASH_DEVICE=${mcu_list[$flash_dev-1]} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-mmb-can
 sudo service klipper start

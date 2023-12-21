@@ -1,6 +1,6 @@
 cd ~/klipper/
 make clean
-make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-mmb-can
+make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons
 
 echo -e 
 echo -e 
@@ -29,7 +29,7 @@ make clean
 make
 
 sudo service klipper stop
-make flash FLASH_DEVICE=${mcu_list[$flash_dev-1]} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-mmb-can
+make flash FLASH_DEVICE=${mcu_list[$flash_dev-1]} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons
 sudo service klipper start
 
 
