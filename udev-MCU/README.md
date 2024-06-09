@@ -40,6 +40,11 @@ Boards like the Easy BRD board for ERCF.
 SUBSYSTEM=="tty",ENV{ID_MODEL_ENC}=="samd21g18a",ENV{ID_USB_VENDOR_ENC}="Klipper",SYMLINK+="serial/by-id/ERCF-EASY-BRD",MODE="0666",GROUP="dialout"
 ``
 
+#CAN0 rename
+#udevadm info -a -p $(udevadm info -q path -p /sys/class/net/can0)| grep serial| head -n 1
+# grab serial. replace it below
+#SUBSYSTEM=="net", ACTION=="add", ATTRS{serial}=="003700545542500920303939", NAME="MyCan"
+
 
 
 save/exit 
