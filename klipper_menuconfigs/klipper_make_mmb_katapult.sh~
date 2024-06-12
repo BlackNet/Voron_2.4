@@ -1,8 +1,8 @@
 
 cd ~/klipper/
 make clean
-make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-MMB-CAN-KATAPULT
-make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-MMB-CAN-KATAPULT
+make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-MMB-CAN-CANBOOT
+make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-MMB-CAN-CANBOOT
 echo -e 
 echo -e 
 echo -e 
