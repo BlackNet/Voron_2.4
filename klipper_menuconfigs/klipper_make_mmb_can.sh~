@@ -1,7 +1,7 @@
 # ERCF 
 UUID="b68d34fa7fa6"
 # spare MMB
-#UUID="ae6c4eb969dd"
+UUID="ae6c4eb969dd"
 
 cd ~/klipper/
 make clean
