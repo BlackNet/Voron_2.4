@@ -1,4 +1,10 @@
+#! /bin/bash
+
+# UUID of device.
 UUID="7c05a6ed647f"
+
+# can interface name, yes it can be changed.
+CAN="can0"
 
 cd ~/klipper/
 make clean
@@ -13,8 +19,16 @@ echo -e "flashing: SBB2209 @ UUID:" $UUID
 
 sudo service klipper stop
 
-python3 ~/Katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u $UUID
+# flash via katapult script
+python3 ~/katapult/scripts/flash_can.py -i $CAN -f ~/klipper/out/klipper.bin -u $UUID
 
-sudo service klipper start
+if [[ "$1" ]]; then
+    echo NOT starting klipper
+else
+    echo starting klipper
+    sudo service klipper start
+fi
+
+echo ---  END SB2209 CAN  ---
 
 

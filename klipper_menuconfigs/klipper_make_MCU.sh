@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # check for empty, if so then exit
 if [ $# -eq 0 ]; then
 	echo -e "syntax: klipper_make_MCU <config_file>"

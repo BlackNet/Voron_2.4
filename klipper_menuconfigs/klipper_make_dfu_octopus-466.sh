@@ -1,3 +1,5 @@
+#! /bin/bash
+
 cd ~/klipper/
 make clean
 
