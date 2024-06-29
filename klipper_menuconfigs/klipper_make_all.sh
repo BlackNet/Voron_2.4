@@ -26,9 +26,13 @@ case "$1" in
 	;;
 	
 	bookworm)
-	./klipper_make_mmb_can_backup.sh $2 $3
-	./klipper_make_SB2209-can.sh $2
-	./klipper_make_u2c.sh $2
+	if [[ -f /sys/class/net/can0/operstate ]]; then
+		./klipper_make_mmb_can_backup.sh $2 $3
+		./klipper_make_SB2209-can.sh $2
+		./klipper_make_u2c.sh $2
+	else
+		echo can0 is DOWN.
+	fi
 	;;
 esac
 
