@@ -32,6 +32,13 @@ echo -e "flashing: " $flash_dev
 sudo service klipper stop
 #make flash FLASH_DEVICE=${mcu_list[$flash_dev-1]} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons
 make flash FLASH_DEVICE=$flash_dev KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons
-sudo service klipper start
+
+
+if [[ "$1" ]]; then
+    echo NOT starting klipper
+else
+    echo starting klipper
+    sudo service klipper start
+fi
 
 

@@ -14,12 +14,6 @@ echo -e
 echo -e "flashing: " $DEVICE
 
 sudo service klipper stop
-<<<<<<< HEAD
-make flash FLASH_DEVICE=$flash_dev KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-octopus-446
-make flash FLASH_DEVICE=0483:df11 KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-octopus-446
-
-sudo service klipper start
-=======
 make flash FLASH_DEVICE=$DEVICE KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-octopus-446
 
 
@@ -48,6 +42,5 @@ fi
 
 echo ---  END OCTOPUS  ---
 
->>>>>>> c094bdc098ac7e21e6b4851ff38611cf50abf1d1
 
 
