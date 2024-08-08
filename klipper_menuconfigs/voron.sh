@@ -1,0 +1,2 @@
+#/printer_data/config/klipper_menuconfigs/
+./klipper_make_all.sh voron false main
