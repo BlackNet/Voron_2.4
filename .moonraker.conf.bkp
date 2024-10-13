@@ -42,10 +42,6 @@ enable_object_processing = True
 
 [history]
 
-[spoolman]
-server = http://voron:7912
-sync_rate = 5
-
 [timelapse]
 
 [power LR_plug0]
@@ -143,18 +139,6 @@ primary_branch = main
 path = ~/moonraker-timelapse
 origin = https://github.com/mainsail-crew/moonraker-timelapse.git
 managed_services = klipper moonraker
-
-[update_manager happy-hare]
-type = git_repo
-path = ~/Happy-Hare
-origin = https://github.com/moggieuk/Happy-Hare.git
-primary_branch = main
-install_script = install.sh
-managed_services = klipper
-
-[mmu_server]
-enable_file_preprocessor = False
-enable_toolchange_next_pos = True
 
 [update_manager Katapult]
 type = git_repo
