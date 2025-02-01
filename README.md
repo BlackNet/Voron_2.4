@@ -46,6 +46,7 @@ Hardware:
   * Kiauh g-code shell extension
   * (defunct, not using) Klipper Expander board - for case lights
   * Nevermore with 2x 5015 fans.
+  * Added u2c can board, RP2040 toolhead board.
 
 
 Software Used:  
