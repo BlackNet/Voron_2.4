@@ -146,7 +146,6 @@ origin = https://github.com/Arksine/katapult.git
 path = ~/katapult
 is_system_service = False
 
-<<<<<<< HEAD
 [update_manager crowsnest]
 type = git_repo
 path = ~/crowsnest
@@ -163,8 +162,6 @@ managed_services = klipper
 primary_branch = main
 install_script = install.sh
 
-=======
->>>>>>> 7fa5654265a8eea8fe4464ea23f6b05f1ccad8cd
 [update_manager happy-hare]
 type = git_repo
 path = ~/Happy-Hare
