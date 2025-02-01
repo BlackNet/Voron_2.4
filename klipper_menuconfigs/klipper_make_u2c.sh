@@ -4,7 +4,9 @@
 UUID="a0ff867f3ef7"
 
 # /dev address of the device, yes it can be changed.
-PORT='/dev/serial/by-id/ERCF-MMU'
+PORT='/dev/serial/by-id/BTT_U2C'
+#PORT="1d50:606f"
+#PORT="1d50:6177"
 
 # can interface, yes it can be changed.
 CAN="can0"
@@ -22,6 +24,7 @@ sudo service klipper stop
 ## This is NOT your normal flash_can. we want BOOT MODE.
 # it will flash itself we have to use the /dev/serial/ line to flash klipper.
 # -r request bootloader and exits.
+
 python3 ~/katapult/scripts/flash_can.py -i $CAN -u $UUID -r
 
 # time for the board to process and return, hopefully.

@@ -6,7 +6,8 @@
 # $2 = main or spare mmb
 
 # ERCF 
-MAIN="b68d34fa7fa6"
+MAIN="ae6c4eb969dd"
+#"b68d34fa7fa6"
 # spare MMB
 SPARE="ae6c4eb969dd"
 
