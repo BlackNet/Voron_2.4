@@ -12,7 +12,7 @@ trusted_clients =
 	169.254.0.0/16
 	172.16.0.0/12
 	192.168.0.0/16
-	100.75.228.29
+	100.75.228.30
 	100.87.93.65
 	100.126.37.42
 	100.82.60.125
@@ -41,10 +41,6 @@ enable_object_processing = True
 [octoprint_compat]
 
 [history]
-
-[spoolman]
-server = http://voron:7912
-sync_rate = 5
 
 [timelapse]
 
@@ -144,21 +140,21 @@ path = ~/moonraker-timelapse
 origin = https://github.com/mainsail-crew/moonraker-timelapse.git
 managed_services = klipper moonraker
 
-[update_manager happy-hare]
-type = git_repo
-path = ~/Happy-Hare
-origin = https://github.com/moggieuk/Happy-Hare.git
-primary_branch = main
-install_script = install.sh
-managed_services = klipper
-
-[mmu_server]
-enable_file_preprocessor = False
-enable_toolchange_next_pos = True
-
 [update_manager Katapult]
 type = git_repo
 origin = https://github.com/Arksine/katapult.git
 path = ~/katapult
 is_system_service = False
+
+[update_manager happy-hare]
+type = git_repo
+path = ~/Happy-Hare
+origin = https://github.com/moggieuk/Happy-Hare.git
+primary_branch = main
+managed_services = klipper
+
+[mmu_server]
+enable_file_preprocessor = True
+enable_toolchange_next_pos = True
+update_spoolman_location = True
 

@@ -1,7 +1,5 @@
 #! /bin/bash
 
-#UUID="7c05a6ed647f"
-#PORT="1d50:606f"
 
 cd ~/katapult/
 make clean
