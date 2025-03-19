@@ -13,7 +13,6 @@ flash_dev=/dev/serial/by-id/SKIRT_PCB
 echo -e "flashing: " $flash_dev
 
 sudo service klipper stop
-echo -e "Compiling ...."
 make -s KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons > /dev/null 2>&1
 
 #make flash FLASH_DEVICE=${mcu_list[$flash_dev-1]} KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons
