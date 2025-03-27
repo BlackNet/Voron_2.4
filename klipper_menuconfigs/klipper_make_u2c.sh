@@ -16,7 +16,9 @@ make clean
 
 echo -e "Compiling ...."
 #make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-U2C
-make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-U2C  > /dev/null 2>&1
+make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-U2C
+
+#  > /dev/null 2>&1
 echo -e 
 echo -e 
 echo -e 

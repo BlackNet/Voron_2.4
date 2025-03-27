@@ -4,7 +4,7 @@ cd ~/klipper/
 make clean 
 
 #make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pi
-make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pi
+make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-raspberry-pi   > /dev/null 2>&1
 
 sudo service klipper stop
 
