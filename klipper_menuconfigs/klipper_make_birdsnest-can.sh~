@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # UUID of device.
-UUID="7c05a6ed647f"
+UUID="7bd329295a23"
 
 # can interface name, yes it can be changed.
 CAN="can0"
@@ -10,14 +10,14 @@ cd ~/klipper/
 make clean
 
 echo -e "Compiling ..."
-make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-ebb2209-rpi
-make -s KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-ebb2209-rpi > /dev/null 2>&1
+make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest
+make -s KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest > /dev/null 2>&1
  
 echo -e 
 echo -e 
 echo -e 
 
-echo -e "flashing: SBB2209 @ UUID:" $UUID
+echo -e "flashing: BirdsNest CAN @ UUID:" $UUID
 
 sudo service klipper stop
 

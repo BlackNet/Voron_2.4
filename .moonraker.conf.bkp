@@ -154,24 +154,11 @@ origin = https://github.com/mainsail-crew/crowsnest.git
 managed_services = crowsnest
 install_script = tools/pkglist.sh
 
-[update_manager klipper-toolchanger]
+[update_manager klipper-toolchanger-easy]
 type = git_repo
 channel = dev
-path = ~/klipper-toolchanger
-origin = https://github.com/viesturz/klipper-toolchanger.git
+path = ~/klipper-toolchanger-easy
+origin = https://github.com/jwellman80/klipper-toolchanger-easy.git
 managed_services = klipper
 primary_branch = main
-install_script = install.sh
-
-[update_manager happy-hare]
-type = git_repo
-path = ~/Happy-Hare
-origin = https://github.com/moggieuk/Happy-Hare.git
-primary_branch = main
-managed_services = klipper
-
-[mmu_server]
-enable_file_preprocessor = True
-enable_toolchange_next_pos = True
-update_spoolman_location = True
 

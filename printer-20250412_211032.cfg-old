@@ -30,14 +30,11 @@ filename: ~/printer_data/config/saved_variables.cfg
 
 #[include mainsail.cfg]
 
-#birds nest
-[include config-other/nest.cfg]
-
 #Timelapse 
 [include timelapse.cfg]
 
 #toolchanger shit
-#[include stealthchanger/toolchanger-include.cfg]
+[include stealthchanger/toolchanger-include.cfg]
 
 
 # Config directory is for the printer config
