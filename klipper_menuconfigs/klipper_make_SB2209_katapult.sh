@@ -2,7 +2,7 @@
 
 cd ~/katapult/
 make clean
-#make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-SB2209-KATAPULT
+make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-SB2209-KATAPULT
 make KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-SB2209-KATAPULT
 echo -e 
 echo -e 

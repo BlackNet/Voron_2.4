@@ -31,6 +31,8 @@ case "$1" in
 		echo "Make SB2209 CAN"
 		./klipper_make_SB2209-can.sh $2
 ###		./klipper_make_u2c.sh $2
+		./klipper_make_birdsnest-can.sh
+
 	else
 		echo can0 is DOWN.
 	fi

@@ -10,7 +10,7 @@ cd ~/klipper/
 make clean
 
 echo -e "Compiling ..."
-make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-ebb2209-rpi
+#make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-ebb2209-rpi
 make -s KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-ebb2209-rpi > /dev/null 2>&1
  
 echo -e 
