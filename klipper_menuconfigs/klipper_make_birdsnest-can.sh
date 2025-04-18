@@ -1,5 +1,8 @@
 #! /bin/bash
 
+#flash device id
+FLASH_DEV=/dev/serial/by-id/ISIK-BirdNest-CAN
+
 # UUID of device.
 UUID="7bd329295a23"
 
@@ -21,8 +24,12 @@ echo -e "flashing: BirdsNest CAN @ UUID:" $UUID
 
 sudo service klipper stop
 
-# flash via katapult script
-python3 ~/katapult/scripts/flash_can.py -i $CAN -f ~/klipper/out/klipper.bin -u $UUID
+#force into boot mode
+python3 ~/katapult/scripts/flashtool.py -i $CAN -r -u $UUID
+
+#update klipper on the new /dev/
+python3 ~/katapult/scripts/flash_can.py -d $FLASH_DEV -f ~/klipper/out/klipper.bin
+
 
 if [[ "$1" ]]; then
     echo NOT starting klipper
