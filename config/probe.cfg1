@@ -18,7 +18,7 @@
   x_offset: 0
   y_offset: 0
   
-  # manually calibrate Z with PROBE_CALIBRATE
+  manually calibrate Z with PROBE_CALIBRATE
   z_offset: 0.658
 
   speed: 5
