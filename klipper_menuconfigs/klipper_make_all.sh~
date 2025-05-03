@@ -26,7 +26,7 @@ case "$1" in
 
 	voron)
 	echo "Make Skirt Buttons"
-	./klipper_make_voron_skirt_buttons.sh $2
+#	./klipper_make_voron_skirt_buttons.sh $2
 	if [[ -f /sys/class/net/can0/operstate ]]; then
 		echo "Make SB2209 CAN"
 		./klipper_make_SB2209-can.sh $2
