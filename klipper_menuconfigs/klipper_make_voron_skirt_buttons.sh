@@ -2,7 +2,7 @@
 
 cd ~/klipper/
 make clean
-make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons
+#make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-voron-skirt-buttons
 
 echo -e 
 echo -e 
