@@ -1,125 +1,86 @@
 
-[mcu SB2209_T0]
-canbus_uuid:7c05a6ed647f
+[mcu EBB36_T1]
+canbus_uuid:cb5db2c42c02
 
-#U2C V2.1
-#canbus_uuid:a0ff867f3ef7
+#85435362bdc8
+
+###cb5db2c42c02
+
 
 # [neopixel sb_leds]
-# pin: SB2209:gpio16
+# pin: EBB36_T1:PD3
 
 
-[temperature_sensor SB2209_cpu_T0]
+[temperature_sensor CPU_T1]
 sensor_type: temperature_mcu
-sensor_mcu: SB2209
+sensor_mcu: EBB36_T1
 min_temp: 0
 max_temp: 100
 
 
-[adxl345]
-cs_pin: SB2209:gpio1
-spi_software_sclk_pin: SB2209:gpio2
-spi_software_mosi_pin: SB2209:gpio0
-spi_software_miso_pin: SB2209:gpio3
-axes_map: z,-y,x
-
-[resonance_tester]
-probe_points: 100, 100, 20
-accel_chip: adxl345
-
-[temperature_sensor SB2209_NTC_t0]
-sensor_type: Generic 3950
-#sensor_type: PT1000
-sensor_pin: SB2209:gpio28
-
-
-[tmc2209 extruder]
-uart_pin: SB2209:gpio20
+[tmc2209 extruder1]
+uart_pin: EBB36_T1:PA15
 run_current: 0.650
 stealthchop_threshold: 999999
 
 #moved to fans.cfg
-[heater_fan hotend_fan_T0]
-pin: SB2209:gpio14 # HEATER FAN
+[heater_fan hotend_fan_T1]
+pin: EBB36_T1:PA1 # HEATER FAN
 
 #[fan]
-[fan_generic T0_partfan]
-pin: SB2209:gpio13  # PART COOLING FAN
+[fan_generic T1_partfan]
+pin: EBB36_T1:PA0  # PART COOLING FAN
 
-# [fan_generic 4W_FAN0]
-# pin: SB2209:gpio15
-# tachometer_pin: SB2209:gpio12
-# #tachometer_ppr: 1
 
-# moved to fans.cfg
-[neopixel sb_leds_T0]
-pin: SB2209:gpio16
-
-# [bltouch]
-# sensor_pin: ^SB2209:gpio21
-# control_pin: SB2209:gpio22
-
-[extruder]
-step_pin: SB2209:gpio18
-dir_pin: !SB2209:gpio19
-enable_pin: !SB2209:gpio17
+[extruder1]
+step_pin: EBB36_T1:PD0
+dir_pin: !EBB36_T1:PD1
+enable_pin: !EBB36_T1:PD2
 microsteps: 16
 #rotation_distance: 33.500
 rotation_distance: 22.6789511
-
-##  Use 50:10 for Stealthburner/Clockwork 2
-##  Use 50:17 for Afterburner/Clockwork (BMG Gear Ratio)
-##  Use 80:20 for M4, M3.1
 gear_ratio: 50:10 # Gear Ratio for CW2
-
-#set to 200 for 1.8-degree stepper
-#set to 400 for 0.9-degree stepper
 full_steps_per_rotation: 200  
 
 nozzle_diameter: 0.400
 filament_diameter: 1.750
-heater_pin: SB2209:gpio7
-#sensor_type: EPCOS 100K B57560G104F
-#sensor_type: PT1000
-#sensor_pin: SB2209:gpio27
+heater_pin: EBB36_T1: PB13
+
 ###################################
 
-sensor_type: MAX31865
-sensor_pin: SB2209:gpio9
-spi_software_sclk_pin: SB2209:gpio10
-spi_software_mosi_pin: SB2209:gpio8
-spi_software_miso_pin: SB2209:gpio11
-
-## for PT1000
+#sensor_type: EPCOS 100K B57560G104F
+sensor_type:MAX31865
+sensor_pin: EBB36_T1: PA4
+spi_bus: spi2a
 rtd_nominal_r: 1000
 rtd_reference_r: 4300
 rtd_num_of_wires: 2
-rtd_use_50Hz_filter: True
+
 
 ##################################
 control: pid
 pid_Kp: 21.527
 pid_Ki: 1.063
 pid_Kd: 108.982
-min_temp: 0
+min_temp: -273
 max_temp: 250
 
-[gcode_macro T0]
-variable_active: 0
+[gcode_macro T1]
+variable_active: 1
 variable_color: ""
 gcode:
-    SELECT_TOOL T=0
+    SELECT_TOOL T=1
 
 
 
 #change the tool numbers to the tool you are configuring, ie T0, T1, etc
-[tool T0]
+[tool T1]
 #change this too
-tool_number: 0
+tool_number: 1
 #if this were T1, then this would be extruder1, etc
-extruder: extruder
+extruder: extruder1
 #Change T0_partfan to tool number
-fan: fan_generic T0_partfan
+fan: fan_generic T1_partfan
 
 #These are build specific, its where the tool is sititng in it's dock.
 params_park_x: 23
@@ -132,13 +93,14 @@ params_input_shaper_type_y: 'mzv'
 params_input_shaper_freq_y: 37.2
 
 
-[tool_probe T0]
-pin: SB2209:gpio24
-tool: 0
+[tool_probe T1_partfan]
+pin: EBB36_T1:PB6
+tool: 1
 x_offset: 0 # X axis-sensor relative nozzle offset
 y_offset: 0 # Y axis-sensor relative nozzle offset
 # More positive = More Squish
 z_offset = 0.658
+## measured 1.36
 
 speed: 5.0
 samples: 3
@@ -147,5 +109,27 @@ sample_retract_dist: 2.0
 samples_tolerance: 0.02
 samples_tolerance_retries: 3
 activate_gcode:
-    _TAP_PROBE_ACTIVATE HEATER=extruder
+    _TAP_PROBE_ACTIVATE HEATER=extruder1
+ ## Tap temp probing
+ {% set PROBE_TEMP = 150 %}
+    {% set MAX_TEMP = PROBE_TEMP + 5 %}
+    {% set ACTUAL_TEMP = printer.extruder1.temperature %}
+    {% set TARGET_TEMP = printer.extruder1.target %}
 
+    {% if TARGET_TEMP > PROBE_TEMP %}
+        { action_respond_info('Extruder temperature target of %.1fC is too high, lowering to %.1fC' % (TARGET_TEMP, PROBE_TEMP)) }
+        M109 S{ PROBE_TEMP }
+    {% else %}
+        # Temperature target is already low enough, but nozzle may still be too hot.
+        {% if ACTUAL_TEMP > MAX_TEMP %}
+            { action_respond_info('Extruder temperature %.1fC is still too high, waiting until below %.1fC' % (ACTUAL_TEMP, MAX_TEMP)) }
+            TEMPERATURE_WAIT SENSOR=extruder1 MAXIMUM={ MAX_TEMP }
+        {% endif %}
+    {% endif %}
+
+
+#[filament_switch_sensor switch_sensor]
+#switch_pin: EBB36_T1:PB4
+
+#[filament_motion_sensor motion_sensor]
+#switch_pin: ^EBB36_T1:PB3
