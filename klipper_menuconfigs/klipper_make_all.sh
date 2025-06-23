@@ -32,6 +32,7 @@ case "$1" in
 		./klipper_make_SB2209-can.sh $2
 ###		./klipper_make_u2c.sh $2
 		./klipper_make_birdsnest-can.sh
+		./klipper_make_EBB36-can.sh
 
 	else
 		echo can0 is DOWN.
