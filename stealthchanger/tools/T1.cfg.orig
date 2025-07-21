@@ -1,69 +1,74 @@
 
-[mcu EBB36_T1]
+[mcu EBBCan_T1]
 canbus_uuid:cb5db2c42c02
 
 #85435362bdc8
 
 ###cb5db2c42c02
 
-
-# [neopixel sb_leds]
-# pin: EBB36_T1:PD3
-
-
-[temperature_sensor CPU_T1]
-sensor_type: temperature_mcu
-sensor_mcu: EBB36_T1
-min_temp: 0
-max_temp: 100
-
-
-[tmc2209 extruder1]
-uart_pin: EBB36_T1:PA15
-run_current: 0.650
-stealthchop_threshold: 999999
-
-#moved to fans.cfg
-[heater_fan hotend_fan_T1]
-pin: EBB36_T1:PA1 # HEATER FAN
-
-#[fan]
-[fan_generic T1_partfan]
-pin: EBB36_T1:PA0  # PART COOLING FAN
-
+[adxl345]
+cs_pin: EBBCan_T1: PB12
+spi_software_sclk_pin: EBBCan_T1: PB10
+spi_software_mosi_pin: EBBCan_T1: PB11
+spi_software_miso_pin: EBBCan_T1: PB2
+#axes_map: x,y,z
 
 [extruder1]
-step_pin: EBB36_T1:PD0
-dir_pin: !EBB36_T1:PD1
-enable_pin: !EBB36_T1:PD2
+step_pin: EBBCan_T1: PD0
+dir_pin: !EBBCan_T1: PD1
+enable_pin: !EBBCan_T1: PD2
 microsteps: 16
-#rotation_distance: 33.500
 rotation_distance: 22.6789511
-gear_ratio: 50:10 # Gear Ratio for CW2
-full_steps_per_rotation: 200  
-
 nozzle_diameter: 0.400
 filament_diameter: 1.750
-heater_pin: EBB36_T1: PB13
+full_steps_per_rotation: 200  
 
-###################################
-
-#sensor_type: EPCOS 100K B57560G104F
-sensor_type:MAX31865
-sensor_pin: EBB36_T1: PA4
-spi_bus: spi2a
-rtd_nominal_r: 1000
-rtd_reference_r: 4300
-rtd_num_of_wires: 2
-
-
-##################################
+heater_pin: EBBCan_T1: PB13
 control: pid
 pid_Kp: 21.527
 pid_Ki: 1.063
 pid_Kd: 108.982
-min_temp: -273
-max_temp: 250
+min_temp: 0
+max_temp: 300
+
+sensor_type:MAX31865
+sensor_pin: EBBCan_T1: PA4
+spi_bus: spi1
+rtd_nominal_r: 100
+rtd_reference_r: 430
+rtd_num_of_wires: 2
+
+[tmc2209 extruder1]
+uart_pin: EBBCan_T1: PA15
+run_current: 0.650
+stealthchop_threshold: 999999
+
+[fan_generic T1_partfan]
+pin: EBBCan_T1: PA0
+
+[heater_fan hotend_fan]
+pin: EBBCan_T1: PA1
+heater: extruder
+heater_temp: 50.0
+
+[neopixel hotend_rgb]
+pin: EBBCan_T1:PD3
+
+#[bltouch]
+#sensor_pin: ^EBBCan_T1:PB8
+#control_pin: EBBCan_T1:PB9
+
+[filament_switch_sensor T1_Filament_sensor]
+switch_pin: EBBCan_T1:PB4
+
+#[filament_motion_sensor motion_sensor]
+#switch_pin: ^EBBCan_T1:PB3
+
+[temperature_sensor CPU_T1]
+sensor_type: temperature_mcu
+sensor_mcu: EBBCan_T1
+min_temp: 0
+max_temp: 100
 
 [gcode_macro T1]
 variable_active: 1
@@ -94,7 +99,7 @@ params_input_shaper_freq_y: 37.2
 
 
 [tool_probe T1_partfan]
-pin: EBB36_T1:PB6
+pin: EBBCan_T1:PB6
 tool: 1
 x_offset: 0 # X axis-sensor relative nozzle offset
 y_offset: 0 # Y axis-sensor relative nozzle offset
@@ -126,10 +131,3 @@ activate_gcode:
             TEMPERATURE_WAIT SENSOR=extruder1 MAXIMUM={ MAX_TEMP }
         {% endif %}
     {% endif %}
-
-
-#[filament_switch_sensor switch_sensor]
-#switch_pin: EBB36_T1:PB4
-
-#[filament_motion_sensor motion_sensor]
-#switch_pin: ^EBB36_T1:PB3

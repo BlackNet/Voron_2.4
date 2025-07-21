@@ -4,7 +4,8 @@
 #FLASH_DEV=/dev/serial/by-id/ISIK-BirdNest-CAN
 
 # UUID of device.
-UUID="cb5db2c42c02"
+UUID=85435362bdc8
+#"cb5db2c42c02"
 
 # can interface name, yes it can be changed.
 CAN="can0"
@@ -25,7 +26,7 @@ echo -e "flashing: EBB36 @ UUID:" $UUID
 sudo service klipper stop
 
 #force into boot mode
-python3 ~/katapult/scripts/flashtool.py -i $CAN -r -u $UUID  -f ~/klipper/out/klipper.bin 
+python3 ~/katapult/scripts/flashtool.py -i $CAN -u $UUID  -f ~/klipper/out/klipper.bin 
 
 if [[ "$1" ]]; then
     echo NOT starting klipper

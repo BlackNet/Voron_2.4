@@ -25,7 +25,7 @@ echo -e "flashing: EBB36 @ UUID:" $UUID
 sudo service klipper stop
 
 #force into boot mode
-python3 ~/katapult/scripts/flashtool.py -i $CAN -r -u $UUID
+python3 ~/katapult/scripts/flashtool.py -i $CAN -u $UUID  -f ~/klipper/out/klipper.bin 
 
 if [[ "$1" ]]; then
     echo NOT starting klipper
