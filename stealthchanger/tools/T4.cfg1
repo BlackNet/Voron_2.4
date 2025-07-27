@@ -1,27 +1,27 @@
 
-[mcu EBBCan_T2]
-canbus_uuid: 48e1094c2d8a
+[mcu EBBCan_T4]
+canbus_uuid: cb5db2c42c02
 
 
 
 [adxl345]
-cs_pin: EBBCan_T2: PB12
-spi_software_sclk_pin: EBBCan_T2: PB10
-spi_software_mosi_pin: EBBCan_T2: PB11
-spi_software_miso_pin: EBBCan_T2: PB2
+cs_pin: EBBCan_T4: PB12
+spi_software_sclk_pin: EBBCan_T4: PB10
+spi_software_mosi_pin: EBBCan_T4: PB11
+spi_software_miso_pin: EBBCan_T4: PB2
 #axes_map: x,y,z
 
-[extruder2]
-step_pin: EBBCan_T2: PD0
-dir_pin: !EBBCan_T2: PD1
-enable_pin: !EBBCan_T2: PD2
+[extruder4]
+step_pin: EBBCan_T4: PD0
+dir_pin: !EBBCan_T4: PD1
+enable_pin: !EBBCan_T4: PD2
 microsteps: 16
 rotation_distance: 22.6789511
 nozzle_diameter: 0.400
 filament_diameter: 1.750
 full_steps_per_rotation: 200  
 
-heater_pin: EBBCan_T2: PB13
+heater_pin: EBBCan_T4: PB13
 control: pid
 pid_Kp: 21.527
 pid_Ki: 1.063
@@ -30,60 +30,60 @@ min_temp: 0
 max_temp: 250
 
 sensor_type:MAX31865
-sensor_pin: EBBCan_T2: PA4
+sensor_pin: EBBCan_T4: PA4
 spi_bus: spi1
 rtd_nominal_r: 100
 rtd_reference_r: 430
 rtd_num_of_wires: 2
 
-[tmc2209 extruder2]
-uart_pin: EBBCan_T2: PA15
+[tmc2209 extruder4]
+uart_pin: EBBCan_T4: PA15
 run_current: 0.650
 stealthchop_threshold: 999999
 
-[multi_pin T2_partfan]
-pins: EBBCan_T2: PA0, EBBCan_T2: PA1
+[multi_pin T4_partfan]
+pins: EBBCan_T4: PA0, EBBCan_T4: PA1
 
-[fan_generic T2_partfan]
-pin: multi_pin:T2_partfan
+[fan_generic T4_partfan]
+pin: multi_pin:T4_partfan
 
-[heater_fan T2_hotend_fan]
-pin: EBBCan_T2: PA2
+[heater_fan T4_hotend_fan]
+pin: EBBCan_T4: PA2
 heater: extruder
 heater_temp: 50.0
 
-[neopixel T2_hotend_RGB]
-pin: EBBCan_T2:PD3
+[neopixel T4_hotend_RGB]
+pin: EBBCan_T4:PD3
 
 #[bltouch]
-#sensor_pin: ^EBBCan_T2:PB8
-#control_pin: EBBCan_T2:PB9
+#sensor_pin: ^EBBCan_T4:PB8
+#control_pin: EBBCan_T4:PB9
 
-[filament_switch_sensor T2_Filament_sensor]
-switch_pin: EBBCan_T2:PB4
+[filament_switch_sensor T4_Filament_sensor]
+switch_pin: EBBCan_T4:PB4
 
 #[filament_motion_sensor motion_sensor]
-#switch_pin: ^EBBCan_T2:PB3
+#switch_pin: ^EBBCan_T4:PB3
 
-[temperature_sensor CPU_T2]
+[temperature_sensor CPU_T4]
 sensor_type: temperature_mcu
-sensor_mcu: EBBCan_T2
+sensor_mcu: EBBCan_T4
 min_temp: 0
 max_temp: 100
 
-[gcode_macro T2]
-variable_active: 2
+[gcode_macro T4]
+variable_active: 4
 variable_color: ""
 gcode:
-    SELECT_TOOL T=2
+    SELECT_TOOL T=4
 
 
 
 #change the tool numbers to the tool you are configuring, ie T0, T1, etc
-[tool T2]
-tool_number: 2
-extruder: extruder2
-fan: fan_generic T2_partfan
+[tool T4]
+tool_number: 4
+extruder: extruder4
+fan: fan_generic T4_partfan
 
 #These are build specific, its where the tool is sititng in it's dock.
 params_park_x: 23
@@ -97,9 +97,9 @@ params_input_shaper_type_y: 'mzv'
 params_input_shaper_freq_y: 37.2
 
 
-[tool_probe T2_partfan]
-pin: EBBCan_T2:PB6
-tool: 2
+[tool_probe T4_partfan]
+pin: EBBCan_T4:PB6
+tool: 4
 x_offset: 0 # X axis-sensor relative nozzle offset
 y_offset: 0 # Y axis-sensor relative nozzle offset
 # More positive = More Squish
@@ -113,12 +113,12 @@ sample_retract_dist: 2.0
 samples_tolerance: 0.02
 samples_tolerance_retries: 3
 activate_gcode:
-    _TAP_PROBE_ACTIVATE HEATER=extruder2
+    _TAP_PROBE_ACTIVATE HEATER=extruder4
  ## Tap temp probing
  {% set PROBE_TEMP = 150 %}
     {% set MAX_TEMP = PROBE_TEMP + 5 %}
-    {% set ACTUAL_TEMP = printer.extruder2.temperature %}
-    {% set TARGET_TEMP = printer.extruder2.target %}
+    {% set ACTUAL_TEMP = printer.extruder4.temperature %}
+    {% set TARGET_TEMP = printer.extruder4.target %}
 
     {% if TARGET_TEMP > PROBE_TEMP %}
         { action_respond_info('Extruder temperature target of %.1fC is too high, lowering to %.1fC' % (TARGET_TEMP, PROBE_TEMP)) }
@@ -127,6 +127,6 @@ activate_gcode:
         # Temperature target is already low enough, but nozzle may still be too hot.
         {% if ACTUAL_TEMP > MAX_TEMP %}
             { action_respond_info('Extruder temperature %.1fC is still too high, waiting until below %.1fC' % (ACTUAL_TEMP, MAX_TEMP)) }
-            TEMPERATURE_WAIT SENSOR=extruder2 MAXIMUM={ MAX_TEMP }
+            TEMPERATURE_WAIT SENSOR=extruder4 MAXIMUM={ MAX_TEMP }
         {% endif %}
     {% endif %}

@@ -1,10 +1,20 @@
 #! /bin/bash
 
-#flash device id
-#FLASH_DEV=/dev/serial/by-id/ISIK-BirdNest-CAN
+##########
+# $1 is UUID 
+##########
+
+##if [ "$#" -ne 1 ]; then
+##    echo "Illegal number of parameters"
+##    echo -n
+##    echo "arg 1 is UUID of the EBB36 board"
+##    exit
+##fi
+
+
 
 # UUID of device.
-UUID="cb5db2c42c02"
+UUID=$1
 
 # can interface name, yes it can be changed.
 CAN="can0"
@@ -20,12 +30,23 @@ echo -e
 echo -e 
 echo -e 
 
-echo -e "flashing: EBB36 @ UUID:" $UUID
+## declare an array variable
+declare -a arr=("84c43dae836d" "cb5db2c42c02" "48e1094c2d8a")
 
-sudo service klipper stop
+## now loop through the above array
+for UUID in "${arr[@]}"
+do
+	###########
+	echo -e "flashing: EBB36 @ UUID:" $UUID
 
-#force into boot mode
-python3 ~/katapult/scripts/flashtool.py -i $CAN -u $UUID  -f ~/klipper/out/klipper.bin 
+	sudo service klipper stop
+
+	#force into boot mode
+	python3 ~/katapult/scripts/flashtool.py -i $CAN -u $UUID  -f ~/klipper/out/klipper.bin 
+
+	############
+done
+
 
 if [[ "$1" ]]; then
     echo NOT starting klipper

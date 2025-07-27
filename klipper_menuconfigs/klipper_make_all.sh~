@@ -38,7 +38,13 @@ case "$1" in
 		./klipper_make_birdsnest-can.sh true
 		
 		echo "Make EBB T1-T4"
-		./klipper_make_EBB36-can.sh true
+		T1="84c43dae836d"
+		T2="cb5db2c42c02"
+		## T3 
+		## T4 
+		
+		./klipper_make_EBB36-can.sh $T1 true
+		./klipper_make_EBB36-can.sh $T2
 
 	else
 		echo can0 is DOWN.
