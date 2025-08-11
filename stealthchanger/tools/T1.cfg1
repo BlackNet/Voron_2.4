@@ -1,6 +1,6 @@
 
 [mcu EBBCan_T1]
-canbus_uuid: 85435362bdc8
+canbus_uuid: 84c43dae836d
 
 
 
@@ -42,28 +42,24 @@ run_current: 0.650
 stealthchop_threshold: 999999
 
 [multi_pin T1_partfan]
-pins: EBBCan_T1: PA0, EBBCan_T1: PA1
+pins: EBBCan_T1: PA0, EBBCan_T1:PA1
 
 [fan_generic T1_partfan]
 pin: multi_pin:T1_partfan
 
-[heater_fan T1_hotend_fan]
-pin: EBBCan_T1: PA2
+[heater_fan T1_Hotend_fan]
+pin: EBBCan_T1: PA3
 heater: extruder
 heater_temp: 50.0
 
 [neopixel T1_hotend_RGB]
 pin: EBBCan_T1:PD3
 
+
 #[bltouch]
 #sensor_pin: ^EBBCan_T1:PB8
 #control_pin: EBBCan_T1:PB9
 
-[filament_switch_sensor T1_Filament_sensor]
-switch_pin: EBBCan_T1:PB4
-
-#[filament_motion_sensor motion_sensor]
-#switch_pin: ^EBBCan_T1:PB3
 
 [temperature_sensor CPU_T1]
 sensor_type: temperature_mcu
@@ -89,16 +85,14 @@ fan: fan_generic T1_partfan
 params_park_x: 23
 params_park_y: 3
 params_park_z: 310
-
 # For InputShaper run per tool and enter the frequency here
 params_input_shaper_type_x: 'mzv'
 params_input_shaper_freq_x: 52
 params_input_shaper_type_y: 'mzv'
 params_input_shaper_freq_y: 37.2
 
-params_accelerometer: 'adxl345 T1'
 
-[tool_probe T1_partfan]
+[tool_probe T1]
 pin: EBBCan_T1:PB6
 tool: 1
 x_offset: 0 # X axis-sensor relative nozzle offset
@@ -131,3 +125,25 @@ activate_gcode:
             TEMPERATURE_WAIT SENSOR=extruder1 MAXIMUM={ MAX_TEMP }
         {% endif %}
     {% endif %}
+
+
+
+[filament_switch_sensor TH1_sensor]
+switch_pin: EBBCan_T1:PB4
+event_delay: 0.1
+pause_delay: 0.1
+pause_on_runout: true
+runout_gcode:
+  M117 Filament switch runout
+  MR_NOTIFY TITLE=" " MESSAGE="Feed me Filament Toolhead 1, seymore!"
+  PARK_MACRO # [pause_resume] is required in printer.cfg
+insert_gcode:
+  M117 Filament switch inserted
+  MR_NOTIFY TITLE=" " MESSAGE="Filament Resume Toolhead 1."
+  RESUME_MACRO
+
+#[filament_motion_sensor motion_sensor]
+#switch_pin: ^EBBCan_T1:PB3
+
+
+
