@@ -4,8 +4,7 @@
 FLASH_DEV=/dev/serial/by-id/ISIK-BirdNest-CAN
 
 # UUID of device.
-UUID="8b689663d3cd"
-#"7bd329295a23"
+UUID="7bd329295a23"
 
 # can interface name, yes it can be changed.
 CAN="can0"
