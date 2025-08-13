@@ -4,7 +4,8 @@
 FLASH_DEV=/dev/serial/by-id/ISIK-BirdNest-CAN
 
 # UUID of device.
-UUID="7bd329295a23"
+UUID="8b689663d3cd"
+#"7bd329295a23"
 
 # can interface name, yes it can be changed.
 CAN="can0"
@@ -13,7 +14,7 @@ cd ~/klipper/
 make clean
 
 echo -e "Compiling ..."
-#make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest-can
+make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest-can
 make -s KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest-can > /dev/null 2>&1
  
 echo -e 

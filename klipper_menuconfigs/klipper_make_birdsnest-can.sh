@@ -14,7 +14,7 @@ cd ~/klipper/
 make clean
 
 echo -e "Compiling ..."
-#make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest-can
+make menuconfig KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest-can
 make -s KCONFIG_CONFIG=~//printer_data/config/klipper_menuconfigs/config-birdsnest-can > /dev/null 2>&1
  
 echo -e 
@@ -26,7 +26,7 @@ echo -e "flashing: BirdsNest CAN @ UUID:" $UUID
 sudo service klipper stop
 
 #force into boot mode
-python3 ~/katapult/scripts/flashtool.py -i $CAN -r -u $UUID
+#python3 ~/katapult/scripts/flashtool.py -i $CAN -r -u $UUID
 
 #update klipper on the new /dev/
 python3 ~/katapult/scripts/flash_can.py -d $FLASH_DEV -f ~/klipper/out/klipper.bin
