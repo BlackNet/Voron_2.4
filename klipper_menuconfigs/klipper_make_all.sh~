@@ -37,7 +37,7 @@ case "$1" in
 		echo "Make BirdsNest"
 		./klipper_make_birdsnest-can.sh true
 		
-		echo "Make EBB T1-T4"
+		echo "Make EBB Toolheads"
 		./klipper_make_EBB36-can.sh true
 
 	else

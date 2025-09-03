@@ -30,8 +30,8 @@ case "$1" in
 
 	echo "Make MCU's"
 	if [[ -f /sys/class/net/can0/operstate ]]; then
-		echo "Make Stealth Burner0"
-		./klipper_make_SB2209-can.sh $2
+#		echo "Make Stealth Burner0"
+#		./klipper_make_SB2209-can.sh $2
 ###		./klipper_make_u2c.sh $2
 
 		echo "Make BirdsNest"

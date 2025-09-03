@@ -25,11 +25,14 @@ echo -e "flashing: BirdsNest CAN @ UUID:" $UUID
 
 sudo service klipper stop
 
-#force into boot mode
-#python3 ~/katapult/scripts/flashtool.py -i $CAN -r -u $UUID
+#flash via katapult
+python3 ~/katapult/scripts/flashtool.py -i $CAN -u $UUID -f ~/klipper/out/klipper.bin
+
+# -= OR =- 
+# force in bootmode w/ -r above then flash via /dev/serial/by-id/ISIK-BirdNest-CAN
 
 #update klipper on the new /dev/
-python3 ~/katapult/scripts/flash_can.py -d $FLASH_DEV -f ~/klipper/out/klipper.bin
+#python3 ~/katapult/scripts/flash_can.py -d $FLASH_DEV -f ~/klipper/out/klipper.bin
 
 
 if [[ "$1" ]]; then
