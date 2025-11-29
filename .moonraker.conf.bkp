@@ -124,16 +124,6 @@ path = ~/fluidd-config
 origin = https://github.com/fluidd-core/fluidd-config.git
 managed_services = klipper
 
-[update_manager mobileraker]
-type = git_repo
-path = /home/pi/mobileraker_companion
-origin = https://github.com/Clon1998/mobileraker_companion.git
-primary_branch = main
-managed_services = mobileraker
-env = /home/pi/mobileraker-env/bin/python
-requirements = scripts/mobileraker-requirements.txt
-install_script = scripts/install.sh
-
 [update_manager timelapse]
 type = git_repo
 primary_branch = main
@@ -171,4 +161,14 @@ requirements = requirements.txt
 system_dependencies = system-dependencies.json
 primary_branch = main
 managed_services = klipper
+
+[update_manager mobileraker]
+install_script = /home/pi/mobileraker_companion/scripts/install.sh
+requirements = /home/pi/mobileraker_companion/scripts/mobileraker-requirements.txt
+env = /home/pi/mobileraker-env/bin/python
+managed_services = mobileraker
+primary_branch = main
+origin = https://github.com/Clon1998/mobileraker_companion.git
+path = /home/pi/mobileraker_companion
+type = git_repo
 
