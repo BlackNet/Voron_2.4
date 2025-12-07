@@ -1,42 +1,19 @@
-#####################################################################
-# Probe
-#    # Inductive Probe
-#    PRB_1=<DCV>, PRB_2=<GND>, PRB_3=PB7,
-#
-#    # BL Touch
-#    BLT_5=<GND>,
-#    BLT_4=<5V>,
-#    BLT_CTL=PB6,   # BL Touch servo pin
-#    BLT_2=<GND>,
-#    BLT_SNSR=PB7,  # BL Touch end stop pin
-#####################################################################
-
-##  This probe is not used for Z height, only Quad Gantry Leveling
 [probe]
-  pin: SB2209_T0:gpio24
+pin: EBBCan_T0:PB6
+#tool: 0
+x_offset: 0 # X axis-sensor relative nozzle offset
+y_offset: 0 # Y axis-sensor relative nozzle offset
+# More positive = More Squish
+z_offset = -0.658
 
-  x_offset: 0
-  y_offset: 0
-  
-  manually calibrate Z with PROBE_CALIBRATE
-  z_offset: 0.658
-
-  speed: 5
-  samples: 3
-  samples_result: median
-  sample_retract_dist: 3.0
-  samples_tolerance: 0.006
-  samples_tolerance_retries: 7
-  lift_speed: 30
-
-
-##
-## This G-code will allow you to probe cold, but will also prevent you from probing with a nozzle at printing temperature 
-## (to try to preserve your build surface).
-##
-
-
+speed: 5.0
+samples: 3
+samples_result: median
+sample_retract_dist: 2.0
+samples_tolerance: 0.02
+samples_tolerance_retries: 3
 activate_gcode:
+    _TAP_PROBE_ACTIVATE HEATER=extruder
  ## Tap temp probing
  {% set PROBE_TEMP = 150 %}
     {% set MAX_TEMP = PROBE_TEMP + 5 %}
