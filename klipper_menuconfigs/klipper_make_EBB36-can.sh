@@ -31,7 +31,7 @@ echo -e
 echo -e 
 
 ## declare an array variable
-declare -a arr=("48e1094c2d8a" "85435362bdc8" "5f19d58033b4" )
+declare -a arr=("1e8a4bf59cb6" "48e1094c2d8a" "85435362bdc8" "5f19d58033b4" )
 
 ## now loop through the above array
 for UUID in "${arr[@]}"
